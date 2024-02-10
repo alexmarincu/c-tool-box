@@ -1,0 +1,46 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "ceedling release",
+            "group": "build",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${workspaceFolder}/c_tool_box"
+            },
+            "presentation": {
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Clean",
+            "type": "shell",
+            "command": "ceedling clobber",
+            "group": "build",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${workspaceFolder}/c_tool_box"
+            },
+            "presentation": {
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Test",
+            "type": "shell",
+            "command": "ceedling test:all",
+            "group": "test",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${workspaceFolder}/c_tool_box"
+            },
+            "presentation": {
+                "panel": "new"
+            }
+        }
+    ]
+}
