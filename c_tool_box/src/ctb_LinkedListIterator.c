@@ -15,6 +15,7 @@ bool ctb_LinkedListIterator_hasNext(ctb_LinkedListIterator * const self) {
 /*----------------------------------------------------------------------------*/
 bool ctb_LinkedListIterator_hasPrevious(ctb_LinkedListIterator * const self) {
     // TODO
+    (void)self;
     return false;
 }
 /*----------------------------------------------------------------------------*/
@@ -29,6 +30,7 @@ ctb_Node * ctb_LinkedListIterator_next(ctb_LinkedListIterator * const self) {
 /*----------------------------------------------------------------------------*/
 ctb_Node * ctb_LinkedListIterator_previous(ctb_LinkedListIterator * const self) {
     // TODO
+    (void)self;
     return NULL;
 }
 /*----------------------------------------------------------------------------*/

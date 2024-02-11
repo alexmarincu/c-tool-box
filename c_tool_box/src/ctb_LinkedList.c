@@ -82,7 +82,6 @@ ctb_Node * ctb_LinkedList_removeByIndex(
 ) {
     // vsk_Assert_true(vsk_Assert_(), index < self->_size);
     ctb_Node * node;
-    void * obj;
     if (self->_size == 1) {
         node = self->_first;
         self->_first = NULL;
@@ -118,6 +117,8 @@ ctb_Node * ctb_LinkedList_remove(
     ctb_LinkedList * const self, ctb_Node * const node
 ) {
     // TODO
+    (void)self;
+    (void)node;
     return NULL;
 }
 /*----------------------------------------------------------------------------*/

@@ -28,6 +28,21 @@
     :test_preprocess:
         - *common_defines
         - TEST
+:tools:
+    :release_compiler:
+        :executable: gcc
+        :arguments:
+            - -I"$": COLLECTION_PATHS_INCLUDE
+            - -DGNU_COMPILER
+            - -c ${1}
+            - -o ${2}
+            - -MMD
+            - -MF ${4}
+            - -std=c99
+            - -Wall
+            - -Wextra
+            - -Werror
+            - -pedantic
 :cmock:
     :mock_prefix: mock_
     :when_no_prototypes: :warn
