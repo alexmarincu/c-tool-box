@@ -22,4 +22,8 @@
 
 // #define container_of(ptr, type, member) ((type *)((char *)(member_type(type, member) *){ ptr } - offsetof(type, member)))
 
+/*----------------------------------------------------------------------------*/
+#define ctb_staticAssert(expression, identifier) \
+    typedef char identifier[(!!(expression)) * 2 - 1]
+
 #endif // CTB_H
