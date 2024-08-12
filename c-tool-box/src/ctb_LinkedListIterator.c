@@ -10,9 +10,11 @@ ctb_LinkedListIterator * ctb_LinkedListIterator_init(
 }
 /*----------------------------------------------------------------------------*/
 bool ctb_LinkedListIterator_hasNext(ctb_LinkedListIterator * const self) {
+    (void)self;
     return (self->_current != NULL);
 }
 /*----------------------------------------------------------------------------*/
+// cppcheck-suppress unusedFunction // API function
 bool ctb_LinkedListIterator_hasPrevious(ctb_LinkedListIterator * const self) {
     // TODO
     (void)self;
@@ -28,6 +30,7 @@ ctb_Node * ctb_LinkedListIterator_next(ctb_LinkedListIterator * const self) {
     return node;
 }
 /*----------------------------------------------------------------------------*/
+// cppcheck-suppress unusedFunction // API function
 ctb_Node * ctb_LinkedListIterator_previous(ctb_LinkedListIterator * const self) {
     // TODO
     (void)self;

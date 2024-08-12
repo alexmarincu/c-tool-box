@@ -40,6 +40,7 @@ void ctb_LinkedList_addByIndex(
     self->_size++;
 }
 /*----------------------------------------------------------------------------*/
+// cppcheck-suppress unusedFunction // API function
 void ctb_LinkedList_addFirst(
     ctb_LinkedList * const self, ctb_Node * const node
 ) {
@@ -69,11 +70,15 @@ ctb_Node * ctb_LinkedList_getByIndex(ctb_LinkedList * const self, size_t index) 
     return node;
 }
 /*----------------------------------------------------------------------------*/
+// cppcheck-suppress unusedFunction // API function
 ctb_Node * ctb_LinkedList_getFirst(ctb_LinkedList * const self) {
+    (void)self;
     return self->_first;
 }
 /*----------------------------------------------------------------------------*/
+// cppcheck-suppress unusedFunction // API function
 ctb_Node * ctb_LinkedList_getLast(ctb_LinkedList * const self) {
+    (void)self;
     return self->_last;
 }
 /*----------------------------------------------------------------------------*/
@@ -113,6 +118,7 @@ ctb_Node * ctb_LinkedList_removeLast(ctb_LinkedList * const self) {
     return ctb_LinkedList_removeByIndex(self, self->_size - 1);
 }
 /*----------------------------------------------------------------------------*/
+// cppcheck-suppress unusedFunction // API function
 ctb_Node * ctb_LinkedList_remove(
     ctb_LinkedList * const self, ctb_Node * const node
 ) {
@@ -122,14 +128,15 @@ ctb_Node * ctb_LinkedList_remove(
     return NULL;
 }
 /*----------------------------------------------------------------------------*/
+// cppcheck-suppress unusedFunction // API function
 size_t ctb_LinkedList_getIndexOf(
-    ctb_LinkedList * const self, ctb_Node * const node
+    ctb_LinkedList * const self, ctb_Node const * const node
 ) {
     size_t index = -1;
     bool nodeFound = false;
     ctb_LinkedListIterator * iter =
         ctb_LinkedListIterator_init(&ctb_obj(ctb_LinkedListIterator), self);
-    ctb_Node * _node;
+    ctb_Node const * _node;
     while ((_node = ctb_LinkedListIterator_next(iter)) && !nodeFound) {
         index++;
         if (node == _node) {
@@ -143,10 +150,13 @@ size_t ctb_LinkedList_getIndexOf(
 }
 /*----------------------------------------------------------------------------*/
 bool ctb_LinkedList_isEmpty(ctb_LinkedList * const self) {
+    (void)self;
     return (self->_size == 0);
 }
 /*----------------------------------------------------------------------------*/
+// cppcheck-suppress unusedFunction // API function
 size_t ctb_LinkedList_getSize(ctb_LinkedList * const self) {
+    (void)self;
     return self->_size;
 }
 /*----------------------------------------------------------------------------*/
@@ -156,6 +166,7 @@ void ctb_LinkedList_clear(ctb_LinkedList * const self) {
     }
 }
 /*----------------------------------------------------------------------------*/
+// cppcheck-suppress unusedFunction // API function
 void ctb_LinkedList_forEach(
     ctb_LinkedList * const self,
     ctb_LinkedListIteratorForEachOperation const operation
@@ -165,6 +176,7 @@ void ctb_LinkedList_forEach(
     ctb_LinkedListIterator_forEach(iter, operation);
 }
 /*----------------------------------------------------------------------------*/
+// cppcheck-suppress unusedFunction // API function
 ctb_Node * ctb_LinkedList_find(
     ctb_LinkedList * const self,
     ctb_LinkedListIteratorFindPredicate const predicate
