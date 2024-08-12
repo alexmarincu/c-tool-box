@@ -36,7 +36,7 @@ ctb_Node * ctb_LinkedList_remove(
     ctb_LinkedList * const self, ctb_Node * const node
 );
 size_t ctb_LinkedList_getIndexOf(
-    ctb_LinkedList * const self, ctb_Node * const node
+    ctb_LinkedList * const self, ctb_Node const * const node
 );
 bool ctb_LinkedList_isEmpty(ctb_LinkedList * const self);
 size_t ctb_LinkedList_getSize(ctb_LinkedList * const self);
