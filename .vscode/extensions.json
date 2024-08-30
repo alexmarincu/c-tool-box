@@ -1,7 +1,6 @@
 {
     "recommendations": [
         "ms-vscode.cpptools",
-        "llvm-vs-code-extensions.vscode-clangd",
         "akiramiyakoda.cppincludeguard",
         "numaru.vscode-ceedling-test-adapter",
         "redhat.vscode-yaml",
@@ -9,6 +8,13 @@
         "ms-python.python",
         "ms-python.isort",
         "ms-python.autopep8",
-        "ms-python.mypy-type-checker"
+        "ms-python.mypy-type-checker",
+        "asciidoctor.asciidoctor-vscode",
+        "streetsidesoftware.code-spell-checker",
+        "samubarb.vscode-doxyfile",
+        "usernamehw.errorlens",
+        "mhutchie.git-graph",
+        "eamodio.gitlens",
+        "cschlosser.doxdocgen"
     ]
 }
