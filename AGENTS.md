@@ -36,8 +36,9 @@ Testing is a core part of the development lifecycle.
 - **Types:** Typedefs follow the pattern `ctb_<Component>_t` (e.g., `ctb_SList_t`).
 - **Functions:** Named as `ctb_<Component>_<Action>` (e.g., `ctb_SList_addFirst`).
 - **Methods:** Implementation follows an OO-like pattern where the first argument is a pointer to the instance, named `self`.
-- **Formatting:** Adhere to the `.clang-format` configuration (based on LLVM with specific alignments). Use 4 spaces for indentation, never tabs.
-- **Strictness:** The project uses strict compiler flags (`-Wall -Wextra -Werror -Wpedantic`). Ensure no warnings are introduced.
+- **Formatting:** Adhere to the `.clang-format` configuration (based on LLVM with specific alignments). Use 4 spaces for indentation, never tabs. Function parameters in signatures should each be on their own line.
+- **Const Placement:** The `const` qualifier must always be placed on the right side of the type it qualifies (e.g., `uint32_t const * const varName`).
+- **Strictness:** The project uses strict compiler flags (`-Wall -Wextra -Werror -Wpedantic` and many others configured in `project.yml`). Ensure no warnings are introduced.
 
 ### Documentation
 
