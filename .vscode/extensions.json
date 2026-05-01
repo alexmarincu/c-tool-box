@@ -15,6 +15,7 @@
         "usernamehw.errorlens",
         "mhutchie.git-graph",
         "eamodio.gitlens",
-        "cschlosser.doxdocgen"
+        "cschlosser.doxdocgen",
+        "hbenl.vscode-test-explorer"
     ]
 }
