@@ -3,6 +3,12 @@
  */
 #ifndef CTB_QUEUE_H
 #define CTB_QUEUE_H
+#include <stdbool.h>
+/**
+ * @ingroup ctb
+ * @defgroup ctb_Queue ctb_Queue
+ * @{
+ */
 
 /**
  * @brief Queue type
@@ -10,7 +16,6 @@
 typedef struct ctb_Queue ctb_Queue_t;
 
 #include "ctb_DList.h"
-#include <stdbool.h>
 
 /**
  * @brief Queue data structure
@@ -25,7 +30,9 @@ struct ctb_Queue {
  * @param self Pointer to a queue
  * @return Pointer to the initialized queue
  */
-ctb_Queue_t * ctb_Queue_init(ctb_Queue_t * const self);
+ctb_Queue_t * ctb_Queue_init(
+    ctb_Queue_t * const self
+);
 
 /**
  * @brief Checks if the queue is empty
@@ -33,7 +40,9 @@ ctb_Queue_t * ctb_Queue_init(ctb_Queue_t * const self);
  * @param self Pointer to a queue
  * @return True if the queue is empty, false otherwise
  */
-bool ctb_Queue_isEmpty(ctb_Queue_t * const self);
+bool ctb_Queue_isEmpty(
+    ctb_Queue_t * const self
+);
 
 /**
  * @brief Adds a node at the end of the queue
@@ -42,7 +51,8 @@ bool ctb_Queue_isEmpty(ctb_Queue_t * const self);
  * @param node Pointer to the node to add
  */
 void ctb_Queue_enqueue(
-    ctb_Queue_t * const self, ctb_DNode_t * const node
+    ctb_Queue_t * const self,
+    ctb_DNode_t * const node
 );
 
 /**
@@ -51,13 +61,18 @@ void ctb_Queue_enqueue(
  * @param self Pointer to a queue
  * @return Pointer to the first node in the queue
  */
-ctb_DNode_t * ctb_Queue_dequeue(ctb_Queue_t * const self);
+ctb_DNode_t * ctb_Queue_dequeue(
+    ctb_Queue_t * const self
+);
 
 /**
  * @brief Clears the queue
  *
  * @param self Pointer to a queue
  */
-void ctb_Queue_clear(ctb_Queue_t * const self);
+void ctb_Queue_clear(
+    ctb_Queue_t * const self
+);
 
+/** @} */
 #endif // CTB_QUEUE_H

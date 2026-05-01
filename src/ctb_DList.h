@@ -3,6 +3,13 @@
  */
 #ifndef CTB_DLIST_H
 #define CTB_DLIST_H
+#include <stdbool.h>
+#include <stddef.h>
+/**
+ * @ingroup ctb
+ * @defgroup ctb_DList ctb_DList
+ * @{
+ */
 
 /**
  * @brief Doubly linked list type
@@ -11,8 +18,6 @@ typedef struct ctb_DList ctb_DList_t;
 
 #include "ctb_DListIterator.h"
 #include "ctb_DNode.h"
-#include <stdbool.h>
-#include <stddef.h>
 
 /**
  * @brief Doubly linked list data structure
@@ -29,7 +34,9 @@ struct ctb_DList {
  * @param self Pointer to a doubly linked list
  * @return Pointer to the initialized doubly linked list
  */
-ctb_DList_t * ctb_DList_init(ctb_DList_t * const self);
+ctb_DList_t * ctb_DList_init(
+    ctb_DList_t * const self
+);
 
 /**
  * @brief Adds a node at the specified index
@@ -39,7 +46,9 @@ ctb_DList_t * ctb_DList_init(ctb_DList_t * const self);
  * @param index Index where to add the node
  */
 void ctb_DList_addByIndex(
-    ctb_DList_t * const self, ctb_DNode_t * const node, size_t const index
+    ctb_DList_t * const self,
+    ctb_DNode_t * const node,
+    size_t const        index
 );
 
 /**
@@ -49,7 +58,8 @@ void ctb_DList_addByIndex(
  * @param node Pointer to the node to add
  */
 void ctb_DList_addFirst(
-    ctb_DList_t * const self, ctb_DNode_t * const node
+    ctb_DList_t * const self,
+    ctb_DNode_t * const node
 );
 
 /**
@@ -58,7 +68,10 @@ void ctb_DList_addFirst(
  * @param self Pointer to a doubly linked list
  * @param node Pointer to the node to add
  */
-void ctb_DList_addLast(ctb_DList_t * const self, ctb_DNode_t * const node);
+void ctb_DList_addLast(
+    ctb_DList_t * const self,
+    ctb_DNode_t * const node
+);
 
 /**
  * @brief Returns the node at the specified index
@@ -67,7 +80,10 @@ void ctb_DList_addLast(ctb_DList_t * const self, ctb_DNode_t * const node);
  * @param index Index of the node to return
  * @return Pointer to the node at the specified index
  */
-ctb_DNode_t * ctb_DList_getByIndex(ctb_DList_t * const self, size_t index);
+ctb_DNode_t * ctb_DList_getByIndex(
+    ctb_DList_t * const self,
+    size_t              index
+);
 
 /**
  * @brief Returns the first node
@@ -75,7 +91,9 @@ ctb_DNode_t * ctb_DList_getByIndex(ctb_DList_t * const self, size_t index);
  * @param self Pointer to a doubly linked list
  * @return Pointer to the first node
  */
-ctb_DNode_t * ctb_DList_getFirst(ctb_DList_t * const self);
+ctb_DNode_t * ctb_DList_getFirst(
+    ctb_DList_t const * const self
+);
 
 /**
  * @brief Returns the last node
@@ -83,7 +101,9 @@ ctb_DNode_t * ctb_DList_getFirst(ctb_DList_t * const self);
  * @param self Pointer to a doubly linked list
  * @return Pointer to the last node
  */
-ctb_DNode_t * ctb_DList_getLast(ctb_DList_t * const self);
+ctb_DNode_t * ctb_DList_getLast(
+    ctb_DList_t const * const self
+);
 
 /**
  * @brief Removes the node at the specified index
@@ -93,7 +113,8 @@ ctb_DNode_t * ctb_DList_getLast(ctb_DList_t * const self);
  * @return Pointer to the removed node
  */
 ctb_DNode_t * ctb_DList_removeByIndex(
-    ctb_DList_t * const self, size_t const index
+    ctb_DList_t * const self,
+    size_t const        index
 );
 
 /**
@@ -102,7 +123,9 @@ ctb_DNode_t * ctb_DList_removeByIndex(
  * @param self Pointer to a doubly linked list
  * @return Pointer to the removed node
  */
-ctb_DNode_t * ctb_DList_removeFirst(ctb_DList_t * const self);
+ctb_DNode_t * ctb_DList_removeFirst(
+    ctb_DList_t * const self
+);
 
 /**
  * @brief Removes the last node
@@ -110,7 +133,9 @@ ctb_DNode_t * ctb_DList_removeFirst(ctb_DList_t * const self);
  * @param self Pointer to a doubly linked list
  * @return Pointer to the removed node
  */
-ctb_DNode_t * ctb_DList_removeLast(ctb_DList_t * const self);
+ctb_DNode_t * ctb_DList_removeLast(
+    ctb_DList_t * const self
+);
 
 /**
  * @brief Removes a node
@@ -120,7 +145,8 @@ ctb_DNode_t * ctb_DList_removeLast(ctb_DList_t * const self);
  * @return Pointer to the removed node
  */
 ctb_DNode_t * ctb_DList_remove(
-    ctb_DList_t * const self, ctb_DNode_t * const node
+    ctb_DList_t * const self,
+    ctb_DNode_t * const node
 );
 
 /**
@@ -131,7 +157,8 @@ ctb_DNode_t * ctb_DList_remove(
  * @return Index of the node, or SIZE_MAX if the node is not found
  */
 size_t ctb_DList_getIndexOf(
-    ctb_DList_t * const self, ctb_DNode_t const * const node
+    ctb_DList_t * const       self,
+    ctb_DNode_t const * const node
 );
 
 /**
@@ -140,7 +167,9 @@ size_t ctb_DList_getIndexOf(
  * @param self Pointer to a doubly linked list
  * @return True if the doubly linked list is empty, false otherwise
  */
-bool ctb_DList_isEmpty(ctb_DList_t * const self);
+bool ctb_DList_isEmpty(
+    ctb_DList_t const * const self
+);
 
 /**
  * @brief Returns the size of the doubly linked list
@@ -148,14 +177,18 @@ bool ctb_DList_isEmpty(ctb_DList_t * const self);
  * @param self Pointer to a doubly linked list
  * @return Size of the doubly linked list
  */
-size_t ctb_DList_getSize(ctb_DList_t * const self);
+size_t ctb_DList_getSize(
+    ctb_DList_t const * const self
+);
 
 /**
  * @brief Clears the doubly linked list
  *
  * @param self Pointer to a doubly linked list
  */
-void ctb_DList_clear(ctb_DList_t * const self);
+void ctb_DList_clear(
+    ctb_DList_t * const self
+);
 
 /**
  * @brief Applies an operation to each node of the doubly linked list
@@ -181,4 +214,5 @@ ctb_DNode_t * ctb_DList_find(
     ctb_DListIterator_FindPredicate_t const predicate
 );
 
+/** @} */
 #endif // CTB_DLIST_H

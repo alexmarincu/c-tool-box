@@ -3,6 +3,11 @@
  */
 #ifndef CTB_SNODE_H
 #define CTB_SNODE_H
+/**
+ * @ingroup ctb
+ * @defgroup ctb_SNode ctb_SNode
+ * @{
+ */
 
 /**
  * @brief Singly linked node type
@@ -22,7 +27,9 @@ struct ctb_SNode {
  * @param self Pointer to a singly linked node
  * @return Pointer to the initialized singly linked node
  */
-ctb_SNode_t * ctb_SNode_init(ctb_SNode_t * const self);
+ctb_SNode_t * ctb_SNode_init(
+    ctb_SNode_t * const self
+);
 
 /**
  * @brief Returns the next node
@@ -30,6 +37,9 @@ ctb_SNode_t * ctb_SNode_init(ctb_SNode_t * const self);
  * @param self Pointer to a singly linked node
  * @return Pointer to the next node
  */
-ctb_SNode_t * ctb_SNode_getNext(ctb_SNode_t * const self);
+ctb_SNode_t * ctb_SNode_getNext(
+    ctb_SNode_t const * const self
+);
 
+/** @} */
 #endif // CTB_SNODE_H

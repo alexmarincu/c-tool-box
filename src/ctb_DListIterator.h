@@ -3,6 +3,12 @@
  */
 #ifndef CTB_DLISTITERATOR_H
 #define CTB_DLISTITERATOR_H
+#include <stdbool.h>
+/**
+ * @ingroup ctb
+ * @defgroup ctb_DListIterator ctb_DListIterator
+ * @{
+ */
 
 /**
  * @brief Doubly linked list iterator type
@@ -10,7 +16,6 @@
 typedef struct ctb_DListIterator ctb_DListIterator_t;
 
 #include "ctb_DNode.h"
-#include <stdbool.h>
 
 /**
  * @brief Typedef for predicate function used to find a node in the doubly linked list
@@ -45,7 +50,8 @@ struct ctb_DListIterator {
  * @return Pointer to the initialized doubly linked list iterator
  */
 ctb_DListIterator_t * ctb_DListIterator_init(
-    ctb_DListIterator_t * const self, ctb_DList_t * const list
+    ctb_DListIterator_t * const self,
+    ctb_DList_t * const         list
 );
 
 /**
@@ -74,7 +80,9 @@ ctb_DListIterator_t * ctb_DListIterator_resetToLast(
  * @param self Pointer to a doubly linked list iterator
  * @return True if there is a node after the current node, false otherwise
  */
-bool ctb_DListIterator_hasNext(ctb_DListIterator_t * const self);
+bool ctb_DListIterator_hasNext(
+    ctb_DListIterator_t const * const self
+);
 
 /**
  * @brief Checks if there is a node before the current node
@@ -82,7 +90,9 @@ bool ctb_DListIterator_hasNext(ctb_DListIterator_t * const self);
  * @param self Pointer to a doubly linked list iterator
  * @return True if there is a node before the current node, false otherwise
  */
-bool ctb_DListIterator_hasPrevious(ctb_DListIterator_t * const self);
+bool ctb_DListIterator_hasPrevious(
+    ctb_DListIterator_t const * const self
+);
 
 /**
  * @brief Returns the next node
@@ -90,7 +100,9 @@ bool ctb_DListIterator_hasPrevious(ctb_DListIterator_t * const self);
  * @param self Pointer to a doubly linked list iterator
  * @return Pointer to the next node, or NULL if there is no next node
  */
-ctb_DNode_t * ctb_DListIterator_next(ctb_DListIterator_t * const self);
+ctb_DNode_t * ctb_DListIterator_next(
+    ctb_DListIterator_t * const self
+);
 
 /**
  * @brief Returns the previous node
@@ -98,7 +110,9 @@ ctb_DNode_t * ctb_DListIterator_next(ctb_DListIterator_t * const self);
  * @param self Pointer to a doubly linked list iterator
  * @return Pointer to the previous node, or NULL if there is no previous node
  */
-ctb_DNode_t * ctb_DListIterator_previous(ctb_DListIterator_t * const self);
+ctb_DNode_t * ctb_DListIterator_previous(
+    ctb_DListIterator_t * const self
+);
 
 /**
  * @brief Applies an operation to each node in the doubly linked list
@@ -123,4 +137,5 @@ ctb_DNode_t * ctb_DListIterator_find(
     ctb_DListIterator_FindPredicate_t const predicate
 );
 
+/** @} */
 #endif // CTB_DLISTITERATOR_H

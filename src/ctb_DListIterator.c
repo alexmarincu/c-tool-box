@@ -1,15 +1,16 @@
 #include "ctb_DListIterator.h"
 
-// cppcheck-suppress unusedFunction // API function
+// cppcheck-suppress [staticFunction, unusedFunction] - API function
 ctb_DListIterator_t * ctb_DListIterator_init(
-    ctb_DListIterator_t * const self, ctb_DList_t * const list
+    ctb_DListIterator_t * const self,
+    ctb_DList_t * const         list
 ) {
     self->list    = list;
     self->current = ctb_DList_getFirst(list);
     return self;
 }
 
-// cppcheck-suppress unusedFunction // API function
+// cppcheck-suppress [staticFunction, unusedFunction] - API function
 ctb_DListIterator_t * ctb_DListIterator_resetToFirst(
     ctb_DListIterator_t * const self
 ) {
@@ -17,7 +18,7 @@ ctb_DListIterator_t * ctb_DListIterator_resetToFirst(
     return self;
 }
 
-// cppcheck-suppress unusedFunction // API function
+// cppcheck-suppress [staticFunction, unusedFunction] - API function
 ctb_DListIterator_t * ctb_DListIterator_resetToLast(
     ctb_DListIterator_t * const self
 ) {
@@ -25,20 +26,24 @@ ctb_DListIterator_t * ctb_DListIterator_resetToLast(
     return self;
 }
 
-// cppcheck-suppress unusedFunction // API function
-bool ctb_DListIterator_hasNext(ctb_DListIterator_t * const self) {
-    (void)self;
+// cppcheck-suppress [staticFunction, unusedFunction] - API function
+bool ctb_DListIterator_hasNext(
+    ctb_DListIterator_t const * const self
+) {
     return (self->current != NULL);
 }
 
-// cppcheck-suppress unusedFunction // API function
-bool ctb_DListIterator_hasPrevious(ctb_DListIterator_t * const self) {
-    (void)self;
+// cppcheck-suppress [staticFunction, unusedFunction] - API function
+bool ctb_DListIterator_hasPrevious(
+    ctb_DListIterator_t const * const self
+) {
     return (self->current != NULL);
 }
 
-// cppcheck-suppress unusedFunction // API function
-ctb_DNode_t * ctb_DListIterator_next(ctb_DListIterator_t * const self) {
+// cppcheck-suppress [staticFunction, unusedFunction] - API function
+ctb_DNode_t * ctb_DListIterator_next(
+    ctb_DListIterator_t * const self
+) {
     ctb_DNode_t * node = NULL;
     if (ctb_DListIterator_hasNext(self)) {
         node          = self->current;
@@ -47,8 +52,10 @@ ctb_DNode_t * ctb_DListIterator_next(ctb_DListIterator_t * const self) {
     return node;
 }
 
-// cppcheck-suppress unusedFunction // API function
-ctb_DNode_t * ctb_DListIterator_previous(ctb_DListIterator_t * const self) {
+// cppcheck-suppress [staticFunction, unusedFunction] - API function
+ctb_DNode_t * ctb_DListIterator_previous(
+    ctb_DListIterator_t * const self
+) {
     ctb_DNode_t * node = NULL;
     if (ctb_DListIterator_hasPrevious(self)) {
         node          = self->current;
@@ -57,7 +64,7 @@ ctb_DNode_t * ctb_DListIterator_previous(ctb_DListIterator_t * const self) {
     return node;
 }
 
-// cppcheck-suppress unusedFunction // API function
+// cppcheck-suppress [staticFunction, unusedFunction] - API function
 void ctb_DListIterator_forEach(
     ctb_DListIterator_t * const                self,
     ctb_DListIterator_ForEachOperation_t const operation
@@ -68,7 +75,7 @@ void ctb_DListIterator_forEach(
     }
 }
 
-// cppcheck-suppress unusedFunction // API function
+// cppcheck-suppress [staticFunction, unusedFunction] - API function
 ctb_DNode_t * ctb_DListIterator_find(
     ctb_DListIterator_t * const             self,
     ctb_DListIterator_FindPredicate_t const predicate

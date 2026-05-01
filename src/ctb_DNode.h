@@ -3,6 +3,11 @@
  */
 #ifndef CTB_DNODE_H
 #define CTB_DNODE_H
+/**
+ * @ingroup ctb
+ * @defgroup ctb_DNode ctb_DNode
+ * @{
+ */
 
 /**
  * @brief Doubly linked node type
@@ -23,7 +28,9 @@ struct ctb_DNode {
  * @param self Pointer to a doubly linked node
  * @return Pointer to the initialized doubly linked node
  */
-ctb_DNode_t * ctb_DNode_init(ctb_DNode_t * const self);
+ctb_DNode_t * ctb_DNode_init(
+    ctb_DNode_t * const self
+);
 
 /**
  * @brief Returns the next node
@@ -31,7 +38,9 @@ ctb_DNode_t * ctb_DNode_init(ctb_DNode_t * const self);
  * @param self Pointer to a doubly linked node
  * @return Pointer to the next node
  */
-ctb_DNode_t * ctb_DNode_getNext(ctb_DNode_t * const self);
+ctb_DNode_t * ctb_DNode_getNext(
+    ctb_DNode_t const * const self
+);
 
 /**
  * @brief Returns the previous node
@@ -39,6 +48,9 @@ ctb_DNode_t * ctb_DNode_getNext(ctb_DNode_t * const self);
  * @param self Pointer to a doubly linked node
  * @return Pointer to the previous node
  */
-ctb_DNode_t * ctb_DNode_getPrev(ctb_DNode_t * const self);
+ctb_DNode_t * ctb_DNode_getPrev(
+    ctb_DNode_t const * const self
+);
 
+/** @} */
 #endif // CTB_DNODE_H
