@@ -24,6 +24,7 @@
 :report_tests_log_factory:
     :reports:
         - html
+        - junit
 :paths:
     :test:
         - +:test/**
@@ -49,6 +50,25 @@
             - -Wfloat-equal
             - -Wshadow
             - -Wconversion
+            - -Wformat=2
+            - -Wnull-dereference
+            - -Wduplicated-cond
+            - -Wduplicated-branches
+            - -Wlogical-op
+            - -Wrestrict
+            - -Wcast-align
+            - -Wdouble-promotion
+            - -Wmissing-prototypes
+            - -Wmissing-declarations
+            - -Wstrict-prototypes
+            - -Wold-style-definition
+            - -Wredundant-decls
+            - -Wnested-externs
+            - -Winline
+            - -Wwrite-strings
+            - -Wcast-qual
+            - -Wswitch-default
+            - -Wswitch-enum
     :test:
         :compile:
             - -Wall
@@ -58,6 +78,21 @@
             - -Wfloat-equal
             - -Wshadow
             - -Wconversion
+            - -Wformat=2
+            - -Wnull-dereference
+            - -Wduplicated-cond
+            - -Wduplicated-branches
+            - -Wlogical-op
+            - -Wrestrict
+            - -Wcast-align
+            - -Wdouble-promotion
+            - -Wstrict-prototypes
+            - -Wold-style-definition
+            - -Wnested-externs
+            - -Winline
+            - -Wwrite-strings
+            - -Wswitch-default
+            - -Wswitch-enum
 :cmock:
     :plugins:
         - :ignore
