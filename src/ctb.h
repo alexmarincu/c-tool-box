@@ -3,6 +3,7 @@
  */
 #ifndef CTB_H
 #define CTB_H
+#include <stddef.h>
 /**
  * @defgroup ctb ctb
  * @{
