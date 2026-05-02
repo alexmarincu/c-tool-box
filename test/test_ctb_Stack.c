@@ -3,6 +3,7 @@
 #include "ctb_Stack.h"
 
 #include "ctb_SList.h"
+#include "ctb_SListIterator.h"
 #include "ctb_SNode.h"
 
 void setUp(void) {}

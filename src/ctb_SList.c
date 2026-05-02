@@ -1,6 +1,8 @@
 #include <stdint.h>
 
+#include "ctb.h"
 #include "ctb_SList.h"
+#include "ctb_SListIterator.h"
 
 // cppcheck-suppress [staticFunction, unusedFunction] - API function
 ctb_SList_t * ctb_SList_init(
@@ -173,4 +175,24 @@ void ctb_SList_clear(
     while (self->size > 0) {
         ctb_SList_removeFirst(self);
     }
+}
+
+// cppcheck-suppress [staticFunction, unusedFunction] - API function
+void ctb_SList_forEach(
+    ctb_SList_t * const                        self,
+    ctb_SListIterator_ForEachOperation_t const operation
+) {
+    ctb_SListIterator_t * iter =
+        ctb_SListIterator_init(&ctb_obj(ctb_SListIterator_t), self);
+    ctb_SListIterator_forEach(iter, operation);
+}
+
+// cppcheck-suppress [staticFunction, unusedFunction] - API function
+ctb_SNode_t * ctb_SList_find(
+    ctb_SList_t * const                     self,
+    ctb_SListIterator_FindPredicate_t const predicate
+) {
+    ctb_SListIterator_t * iter =
+        ctb_SListIterator_init(&ctb_obj(ctb_SListIterator_t), self);
+    return ctb_SListIterator_find(iter, predicate);
 }

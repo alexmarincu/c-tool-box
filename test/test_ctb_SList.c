@@ -3,7 +3,7 @@
 #include "unity.h"
 
 #include "ctb_SList.h"
-
+#include "ctb_SListIterator.h"
 #include "ctb_SNode.h"
 
 void setUp(void) {}
@@ -161,4 +161,59 @@ void test_ctb_SList_clear_should_empty_list(void) {
     TEST_ASSERT_TRUE(ctb_SList_isEmpty(&list));
     TEST_ASSERT_EQUAL_INT(0, ctb_SList_getSize(&list));
     TEST_ASSERT_NULL(ctb_SList_getFirst(&list));
+}
+
+static int callCount = 0;
+
+static void countOperation(
+    ctb_SNode_t * const node
+) {
+    (void)node;
+    callCount++;
+}
+
+void test_ctb_SList_forEach_should_apply_to_all_nodes(void) {
+    ctb_SList_t list;
+    ctb_SNode_t node1, node2, node3;
+
+    ctb_SList_init(&list);
+    ctb_SNode_init(&node1);
+    ctb_SNode_init(&node2);
+    ctb_SNode_init(&node3);
+    ctb_SList_addLast(&list, &node1);
+    ctb_SList_addLast(&list, &node2);
+    ctb_SList_addLast(&list, &node3);
+
+    callCount = 0;
+    ctb_SList_forEach(&list, countOperation);
+
+    TEST_ASSERT_EQUAL_INT(3, callCount);
+}
+
+static ctb_SNode_t * targetNode = NULL;
+
+static bool findPredicate(
+    ctb_SNode_t * const node
+) {
+    (void)node;
+    return node == targetNode;
+}
+
+void test_ctb_SList_find_should_return_matching_node(void) {
+    ctb_SList_t list;
+    ctb_SNode_t node1, node2, node3;
+
+    ctb_SList_init(&list);
+    ctb_SNode_init(&node1);
+    ctb_SNode_init(&node2);
+    ctb_SNode_init(&node3);
+    ctb_SList_addLast(&list, &node1);
+    ctb_SList_addLast(&list, &node2);
+    ctb_SList_addLast(&list, &node3);
+
+    targetNode = &node2;
+    TEST_ASSERT_EQUAL_PTR(&node2, ctb_SList_find(&list, findPredicate));
+
+    targetNode = NULL; // Won't match anything
+    TEST_ASSERT_NULL(ctb_SList_find(&list, findPredicate));
 }

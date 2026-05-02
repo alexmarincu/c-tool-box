@@ -16,6 +16,7 @@
  */
 typedef struct ctb_SList ctb_SList_t;
 
+#include "ctb_SListIterator.h"
 #include "ctb_SNode.h"
 
 /**
@@ -186,6 +187,29 @@ size_t ctb_SList_getSize(
  */
 void ctb_SList_clear(
     ctb_SList_t * const self
+);
+
+/**
+ * @brief Applies an operation to each node of the singly linked list
+ *
+ * @param self Pointer to a singly linked list
+ * @param operation The function to apply to each node
+ */
+void ctb_SList_forEach(
+    ctb_SList_t * const                        self,
+    ctb_SListIterator_ForEachOperation_t const operation
+);
+
+/**
+ * @brief Finds a node in the singly linked list that matches a predicate
+ *
+ * @param self Pointer to a singly linked list
+ * @param predicate The predicate function to test each node
+ * @return Pointer to the first matching node, or NULL if no match is found
+ */
+ctb_SNode_t * ctb_SList_find(
+    ctb_SList_t * const                     self,
+    ctb_SListIterator_FindPredicate_t const predicate
 );
 
 /** @} */
