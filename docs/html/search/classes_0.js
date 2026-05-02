@@ -5,6 +5,7 @@ var searchData=
   ['ctb_5fdnode_2',['ctb_DNode',['../structctb__DNode.html',1,'']]],
   ['ctb_5fqueue_3',['ctb_Queue',['../structctb__Queue.html',1,'']]],
   ['ctb_5fslist_4',['ctb_SList',['../structctb__SList.html',1,'']]],
-  ['ctb_5fsnode_5',['ctb_SNode',['../structctb__SNode.html',1,'']]],
-  ['ctb_5fstack_6',['ctb_Stack',['../structctb__Stack.html',1,'']]]
+  ['ctb_5fslistiterator_5',['ctb_SListIterator',['../structctb__SListIterator.html',1,'']]],
+  ['ctb_5fsnode_6',['ctb_SNode',['../structctb__SNode.html',1,'']]],
+  ['ctb_5fstack_7',['ctb_Stack',['../structctb__Stack.html',1,'']]]
 ];

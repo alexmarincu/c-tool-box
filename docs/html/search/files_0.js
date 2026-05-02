@@ -6,6 +6,7 @@ var searchData=
   ['ctb_5fdnode_2eh_3',['ctb_DNode.h',['../ctb__DNode_8h.html',1,'']]],
   ['ctb_5fqueue_2eh_4',['ctb_Queue.h',['../ctb__Queue_8h.html',1,'']]],
   ['ctb_5fslist_2eh_5',['ctb_SList.h',['../ctb__SList_8h.html',1,'']]],
-  ['ctb_5fsnode_2eh_6',['ctb_SNode.h',['../ctb__SNode_8h.html',1,'']]],
-  ['ctb_5fstack_2eh_7',['ctb_Stack.h',['../ctb__Stack_8h.html',1,'']]]
+  ['ctb_5fslistiterator_2eh_6',['ctb_SListIterator.h',['../ctb__SListIterator_8h.html',1,'']]],
+  ['ctb_5fsnode_2eh_7',['ctb_SNode.h',['../ctb__SNode_8h.html',1,'']]],
+  ['ctb_5fstack_2eh_8',['ctb_Stack.h',['../ctb__Stack_8h.html',1,'']]]
 ];

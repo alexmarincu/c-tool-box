@@ -105,6 +105,7 @@ $(function(){initNavTree('ctb__SList_8h.html','',''); });
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &lt;stddef.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="ctb__SListIterator_8h_source.html">ctb_SListIterator.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ctb__SNode_8h_source.html">ctb_SNode.h</a>&quot;</code><br />
 </div>
 <p><a href="ctb__SList_8h_source.html">Go to the source code of this file.</a></p>
@@ -152,6 +153,10 @@ Functions</h2></td></tr>
 <tr class="memdesc:gad6ec00d350512d01bf4a2dcade9c4828"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the size of the singly linked list.  <br /></td></tr>
 <tr class="memitem:ga94908e38ad44e1e9f26a643d9b957ee1" id="r_ga94908e38ad44e1e9f26a643d9b957ee1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__ctb__SList.html#ga94908e38ad44e1e9f26a643d9b957ee1">ctb_SList_clear</a> (<a class="el" href="group__ctb__SList.html#ga988d9107590aba59eda54c1f8cb20cf2">ctb_SList_t</a> *const self)</td></tr>
 <tr class="memdesc:ga94908e38ad44e1e9f26a643d9b957ee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the singly linked list.  <br /></td></tr>
+<tr class="memitem:ga79c9f3ceeba23d6d7d2311d0893ccace" id="r_ga79c9f3ceeba23d6d7d2311d0893ccace"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__ctb__SList.html#ga79c9f3ceeba23d6d7d2311d0893ccace">ctb_SList_forEach</a> (<a class="el" href="group__ctb__SList.html#ga988d9107590aba59eda54c1f8cb20cf2">ctb_SList_t</a> *const self, <a class="el" href="group__ctb__SListIterator.html#ga16f3051db423f69b3b65f635455870d6">ctb_SListIterator_ForEachOperation_t</a> const operation)</td></tr>
+<tr class="memdesc:ga79c9f3ceeba23d6d7d2311d0893ccace"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies an operation to each node of the singly linked list.  <br /></td></tr>
+<tr class="memitem:ga71321c83ad7b03b83d824592bcc9a688" id="r_ga71321c83ad7b03b83d824592bcc9a688"><td class="memItemLeft"><a class="el" href="group__ctb__SNode.html#gad41a2cbe5c69b61a4eef454790f4d220">ctb_SNode_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="group__ctb__SList.html#ga71321c83ad7b03b83d824592bcc9a688">ctb_SList_find</a> (<a class="el" href="group__ctb__SList.html#ga988d9107590aba59eda54c1f8cb20cf2">ctb_SList_t</a> *const self, <a class="el" href="group__ctb__SListIterator.html#ga04b15a610b01086d9c88867292271d09">ctb_SListIterator_FindPredicate_t</a> const predicate)</td></tr>
+<tr class="memdesc:ga71321c83ad7b03b83d824592bcc9a688"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds a node in the singly linked list that matches a predicate.  <br /></td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -132,9 +132,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga2813e24152da8174dad519573e2dc75d" id="r_ga2813e24152da8174dad519573e2dc75d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga2813e24152da8174dad519573e2dc75d">ctb_DListIterator_hasPrevious</a> (<a class="el" href="#ga2de46144ed4d7eb763d10552fa833cc0">ctb_DListIterator_t</a> const *const self)</td></tr>
 <tr class="memdesc:ga2813e24152da8174dad519573e2dc75d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if there is a node before the current node.  <br /></td></tr>
 <tr class="memitem:gabdcc23aecd312d3e6c89bea1458447a1" id="r_gabdcc23aecd312d3e6c89bea1458447a1"><td class="memItemLeft"><a class="el" href="group__ctb__DNode.html#gaa232fcb35df50a9fba1f09d87c03e376">ctb_DNode_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#gabdcc23aecd312d3e6c89bea1458447a1">ctb_DListIterator_next</a> (<a class="el" href="#ga2de46144ed4d7eb763d10552fa833cc0">ctb_DListIterator_t</a> *const self)</td></tr>
-<tr class="memdesc:gabdcc23aecd312d3e6c89bea1458447a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next node.  <br /></td></tr>
+<tr class="memdesc:gabdcc23aecd312d3e6c89bea1458447a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the next node and advances the iterator.  <br /></td></tr>
 <tr class="memitem:gab03fc9ae52f247104ef6c74014c40452" id="r_gab03fc9ae52f247104ef6c74014c40452"><td class="memItemLeft"><a class="el" href="group__ctb__DNode.html#gaa232fcb35df50a9fba1f09d87c03e376">ctb_DNode_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#gab03fc9ae52f247104ef6c74014c40452">ctb_DListIterator_previous</a> (<a class="el" href="#ga2de46144ed4d7eb763d10552fa833cc0">ctb_DListIterator_t</a> *const self)</td></tr>
-<tr class="memdesc:gab03fc9ae52f247104ef6c74014c40452"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the previous node.  <br /></td></tr>
+<tr class="memdesc:gab03fc9ae52f247104ef6c74014c40452"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the previous node and moves the iterator back.  <br /></td></tr>
 <tr class="memitem:ga4c9ddb470b1f0181806422a89db9e77e" id="r_ga4c9ddb470b1f0181806422a89db9e77e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga4c9ddb470b1f0181806422a89db9e77e">ctb_DListIterator_forEach</a> (<a class="el" href="#ga2de46144ed4d7eb763d10552fa833cc0">ctb_DListIterator_t</a> *const self, <a class="el" href="#ga5f5894393da8b26f1642150a57445324">ctb_DListIterator_ForEachOperation_t</a> const operation)</td></tr>
 <tr class="memdesc:ga4c9ddb470b1f0181806422a89db9e77e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies an operation to each node in the doubly linked list.  <br /></td></tr>
 <tr class="memitem:ga92d52cec2c11783e5a0acf70e0666a82" id="r_ga92d52cec2c11783e5a0acf70e0666a82"><td class="memItemLeft"><a class="el" href="group__ctb__DNode.html#gaa232fcb35df50a9fba1f09d87c03e376">ctb_DNode_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga92d52cec2c11783e5a0acf70e0666a82">ctb_DListIterator_find</a> (<a class="el" href="#ga2de46144ed4d7eb763d10552fa833cc0">ctb_DListIterator_t</a> *const self, <a class="el" href="#gab3f18e0cf8c858c1a5392dd09bae1c1a">ctb_DListIterator_FindPredicate_t</a> const predicate)</td></tr>
@@ -157,11 +157,11 @@ Functions</h2></td></tr>
 <p>Typedef for predicate function used to find a node in the doubly linked list. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">node</td><td>Pointer to the node </td></tr>
+    <tr><td class="paramname">node</td><td>Pointer to the node to test. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>True if the node satisfies the predicate, false otherwise </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the node satisfies the predicate, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -180,7 +180,7 @@ Functions</h2></td></tr>
 <p>Typedef for operation function to be applied to each node in the doubly linked list. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">node</td><td>Pointer to the node </td></tr>
+    <tr><td class="paramname">node</td><td>Pointer to the node to operate on. </td></tr>
   </table>
   </dd>
 </dl>
@@ -210,12 +210,12 @@ Functions</h2></td></tr>
 <p>Finds a node in the doubly linked list that satisfies a predicate. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">self</td><td>Pointer to a doubly linked list iterator </td></tr>
-    <tr><td class="paramname">predicate</td><td>Predicate function </td></tr>
+    <tr><td class="paramname">self</td><td>Pointer to the doubly linked list iterator. </td></tr>
+    <tr><td class="paramname">predicate</td><td>The predicate function to test each node. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to the found node, or NULL if no node satisfies the predicate </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the first matching node, or NULL if no match is found. </dd></dl>
 
 </div>
 </div>
@@ -241,8 +241,8 @@ Functions</h2></td></tr>
 <p>Applies an operation to each node in the doubly linked list. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">self</td><td>Pointer to a doubly linked list iterator </td></tr>
-    <tr><td class="paramname">operation</td><td>Operation to apply to each node </td></tr>
+    <tr><td class="paramname">self</td><td>Pointer to the doubly linked list iterator. </td></tr>
+    <tr><td class="paramname">operation</td><td>The operation to apply to each node. </td></tr>
   </table>
   </dd>
 </dl>
@@ -267,11 +267,11 @@ Functions</h2></td></tr>
 <p>Checks if there is a node after the current node. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">self</td><td>Pointer to a doubly linked list iterator </td></tr>
+    <tr><td class="paramname">self</td><td>Pointer to the doubly linked list iterator. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>True if there is a node after the current node, false otherwise </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if there is a next node, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -293,11 +293,11 @@ Functions</h2></td></tr>
 <p>Checks if there is a node before the current node. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">self</td><td>Pointer to a doubly linked list iterator </td></tr>
+    <tr><td class="paramname">self</td><td>Pointer to the doubly linked list iterator. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>True if there is a node before the current node, false otherwise </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true if there is a previous node, false otherwise. </dd></dl>
 
 </div>
 </div>
@@ -323,12 +323,12 @@ Functions</h2></td></tr>
 <p>Initializes a doubly linked list iterator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">self</td><td>Pointer to a doubly linked list iterator </td></tr>
-    <tr><td class="paramname">list</td><td>Pointer to the doubly linked list </td></tr>
+    <tr><td class="paramname">self</td><td>Pointer to the doubly linked list iterator to initialize. </td></tr>
+    <tr><td class="paramname">list</td><td>Pointer to the doubly linked list to iterate over. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to the initialized doubly linked list iterator </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the initialized doubly linked list iterator (self). </dd></dl>
 
 </div>
 </div>
@@ -347,14 +347,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the next node. </p>
+<p>Returns the next node and advances the iterator. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">self</td><td>Pointer to a doubly linked list iterator </td></tr>
+    <tr><td class="paramname">self</td><td>Pointer to the doubly linked list iterator. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to the next node, or NULL if there is no next node </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the next node, or NULL if there are no more nodes. </dd></dl>
 
 </div>
 </div>
@@ -373,14 +373,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Returns the previous node. </p>
+<p>Returns the previous node and moves the iterator back. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">self</td><td>Pointer to a doubly linked list iterator </td></tr>
+    <tr><td class="paramname">self</td><td>Pointer to the doubly linked list iterator. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to the previous node, or NULL if there is no previous node </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the previous node, or NULL if there are no more nodes. </dd></dl>
 
 </div>
 </div>
@@ -402,11 +402,11 @@ Functions</h2></td></tr>
 <p>Resets the iterator to the first node. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">self</td><td>Pointer to a doubly linked list iterator </td></tr>
+    <tr><td class="paramname">self</td><td>Pointer to the doubly linked list iterator. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to the doubly linked list iterator reset to the first node </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the doubly linked list iterator (self). </dd></dl>
 
 </div>
 </div>
@@ -428,11 +428,11 @@ Functions</h2></td></tr>
 <p>Resets the iterator to the last node. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">self</td><td>Pointer to a doubly linked list iterator </td></tr>
+    <tr><td class="paramname">self</td><td>Pointer to the doubly linked list iterator. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Pointer to the doubly linked list iterator reset to the last node </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the doubly linked list iterator (self). </dd></dl>
 
 </div>
 </div>

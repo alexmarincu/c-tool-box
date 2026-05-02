@@ -5,6 +5,8 @@ var ctb__SList_8h =
     [ "ctb_SList_addFirst", "group__ctb__SList.html#gaad99f544b48f12514a8d28fd05890fa4", null ],
     [ "ctb_SList_addLast", "group__ctb__SList.html#gaea143f4b2c408df7bde7adab70aff61e", null ],
     [ "ctb_SList_clear", "group__ctb__SList.html#ga94908e38ad44e1e9f26a643d9b957ee1", null ],
+    [ "ctb_SList_find", "group__ctb__SList.html#ga71321c83ad7b03b83d824592bcc9a688", null ],
+    [ "ctb_SList_forEach", "group__ctb__SList.html#ga79c9f3ceeba23d6d7d2311d0893ccace", null ],
     [ "ctb_SList_getByIndex", "group__ctb__SList.html#gad81e8d7d4b5063be6cb8ad353efac1d0", null ],
     [ "ctb_SList_getFirst", "group__ctb__SList.html#ga077a7d13cb44200c6f1a748646822544", null ],
     [ "ctb_SList_getIndexOf", "group__ctb__SList.html#ga8a4c8d6ad2225335addc885f97935dd6", null ],

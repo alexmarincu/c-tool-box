@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>C Tool Box: Data Fields - Variables</title>
+<title>C Tool Box: ctb_SListIterator Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -74,7 +74,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('functions_vars.html','',''); });
+$(function(){initNavTree('structctb__SListIterator.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -99,22 +99,71 @@ $(function(){initNavTree('functions_vars.html','',''); });
 </div>
 </div>
 
+<div class="header">
+  <div class="headertitle"><div class="title">ctb_SListIterator Struct Reference<div class="ingroups"><a class="el" href="group__ctb.html">ctb</a> &raquo; <a class="el" href="group__ctb__SListIterator.html">ctb_SListIterator</a></div></div></div>
+</div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all documented variables with links to the struct/union documentation for each field:</div><ul>
-<li>current&#160;:&#160;<a class="el" href="structctb__DListIterator.html#abbf47bb9042d458f1fde85033e2d3ff4">ctb_DListIterator</a>, <a class="el" href="structctb__SListIterator.html#a954b8130b9b7ffa329abf0ee6f0680e5">ctb_SListIterator</a></li>
-<li>first&#160;:&#160;<a class="el" href="structctb__DList.html#ae5596e16564a516b3d701ca2baea2535">ctb_DList</a>, <a class="el" href="structctb__SList.html#a0790518a43a018bb0c652ef605fe5cf4">ctb_SList</a></li>
-<li>last&#160;:&#160;<a class="el" href="structctb__DList.html#a8e3603e5487716f1c7ae328c70ab9db0">ctb_DList</a></li>
-<li>list&#160;:&#160;<a class="el" href="structctb__DListIterator.html#aa70cc3088ec79a599b4c56adc08023bd">ctb_DListIterator</a>, <a class="el" href="structctb__SListIterator.html#a9f2399a01fd3e78b7e200108bda1ff74">ctb_SListIterator</a>, <a class="el" href="structctb__Stack.html#a634a95244586bbb2a5aea9669ec0f563">ctb_Stack</a></li>
-<li>next&#160;:&#160;<a class="el" href="structctb__DNode.html#a0236d4da3454e5dfe68c53f7dc66e2f4">ctb_DNode</a>, <a class="el" href="structctb__SNode.html#a45cbded55464bb36fe3af6bc3b79cf2a">ctb_SNode</a></li>
-<li>prev&#160;:&#160;<a class="el" href="structctb__DNode.html#a5727eb487889db0e06df7dc35c84fa4c">ctb_DNode</a></li>
-<li>size&#160;:&#160;<a class="el" href="structctb__DList.html#a7e73e05a8e8e03ccd9b3734817e9a8a4">ctb_DList</a>, <a class="el" href="structctb__SList.html#a7e3e99bd876aaf8adc28963496f0b42a">ctb_SList</a></li>
+
+<p>Singly linked list iterator data structure.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="ctb__SListIterator_8h_source.html">ctb_SListIterator.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:a9f2399a01fd3e78b7e200108bda1ff74" id="r_a9f2399a01fd3e78b7e200108bda1ff74"><td class="memItemLeft"><a class="el" href="group__ctb__SList.html#ga988d9107590aba59eda54c1f8cb20cf2">ctb_SList_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a9f2399a01fd3e78b7e200108bda1ff74">list</a></td></tr>
+<tr class="memitem:a954b8130b9b7ffa329abf0ee6f0680e5" id="r_a954b8130b9b7ffa329abf0ee6f0680e5"><td class="memItemLeft"><a class="el" href="group__ctb__SNode.html#gad41a2cbe5c69b61a4eef454790f4d220">ctb_SNode_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#a954b8130b9b7ffa329abf0ee6f0680e5">current</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Singly linked list iterator data structure. </p>
+</div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Field Documentation</h2>
+<a id="a954b8130b9b7ffa329abf0ee6f0680e5" name="a954b8130b9b7ffa329abf0ee6f0680e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a954b8130b9b7ffa329abf0ee6f0680e5">&#9670;&#160;</a></span>current</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ctb__SNode.html#gad41a2cbe5c69b61a4eef454790f4d220">ctb_SNode_t</a>* ctb_SListIterator::current</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Pointer to the current node in the iteration. </p>
+
+</div>
+</div>
+<a id="a9f2399a01fd3e78b7e200108bda1ff74" name="a9f2399a01fd3e78b7e200108bda1ff74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f2399a01fd3e78b7e200108bda1ff74">&#9670;&#160;</a></span>list</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__ctb__SList.html#ga988d9107590aba59eda54c1f8cb20cf2">ctb_SList_t</a>* ctb_SListIterator::list</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Pointer to the singly linked list. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="ctb__SListIterator_8h_source.html">ctb_SListIterator.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a href="structctb__SListIterator.html">ctb_SListIterator</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

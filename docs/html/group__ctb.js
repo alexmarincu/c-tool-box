@@ -5,6 +5,7 @@ var group__ctb =
     [ "ctb_DNode", "group__ctb__DNode.html", "group__ctb__DNode" ],
     [ "ctb_Queue", "group__ctb__Queue.html", "group__ctb__Queue" ],
     [ "ctb_SList", "group__ctb__SList.html", "group__ctb__SList" ],
+    [ "ctb_SListIterator", "group__ctb__SListIterator.html", "group__ctb__SListIterator" ],
     [ "ctb_SNode", "group__ctb__SNode.html", "group__ctb__SNode" ],
     [ "ctb_Stack", "group__ctb__Stack.html", "group__ctb__Stack" ],
     [ "ctb_alignOf", "group__ctb.html#ga7d64364eec9882fd8f511bb444cd13d5", null ],
