@@ -1,7 +1,10 @@
-#include "ctb.h"
-#include "ctb_DNode.h"
-#include "unity.h"
 #include <string.h>
+
+#include "unity.h"
+
+#include "ctb_DNode.h"
+
+#include "ctb.h"
 
 void setUp(void) {}
 void tearDown(void) {}
