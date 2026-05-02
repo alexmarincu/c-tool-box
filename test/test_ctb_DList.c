@@ -1,44 +1,46 @@
 #include "unity.h"
 
 #include "ctb_DList.h"
+
 #include "ctb_DListIterator.h"
 #include "ctb_DNode.h"
 
-static ctb_DList_t list;
-static ctb_DNode_t node1;
-static ctb_DNode_t node2;
-static ctb_DNode_t node3;
-
-void setUp(void) {
-    ctb_DList_init(&list);
-    ctb_DNode_init(&node1);
-    ctb_DNode_init(&node2);
-    ctb_DNode_init(&node3);
-}
-
+void setUp(void) {}
 void tearDown(void) {}
 
-void test_ctb_DList_init_should_initializeEmptyList(void) {
-    ctb_DList_t   newList;
-    ctb_DList_t * result = ctb_DList_init(&newList);
-
-    TEST_ASSERT_EQUAL_PTR(&newList, result);
-    TEST_ASSERT_NULL(newList.first);
-    TEST_ASSERT_NULL(newList.last);
-    TEST_ASSERT_EQUAL_INT(0, newList.size);
+void test_ctb_DList_init_should_initialize_list(void) {
+    ctb_DList_t list;
+    ctb_DList_init(&list);
+    TEST_ASSERT_TRUE(ctb_DList_isEmpty(&list));
+    TEST_ASSERT_EQUAL_INT(0, ctb_DList_getSize(&list));
+    TEST_ASSERT_NULL(ctb_DList_getFirst(&list));
+    TEST_ASSERT_NULL(ctb_DList_getLast(&list));
 }
 
-void test_ctb_DList_isEmpty_should_returnTrueForEmptyList(void) {
+void test_ctb_DList_isEmpty_should_return_true_for_empty_list(void) {
+    ctb_DList_t list;
+    ctb_DList_init(&list);
     TEST_ASSERT_TRUE(ctb_DList_isEmpty(&list));
 }
 
-void test_ctb_DList_isEmpty_should_returnFalseForNonEmptyList(void) {
+void test_ctb_DList_isEmpty_should_return_false_for_non_empty_list(void) {
+    ctb_DList_t list;
+    ctb_DList_init(&list);
+    ctb_DNode_t node1;
+    ctb_DNode_init(&node1);
+
     ctb_DList_addFirst(&list, &node1);
     TEST_ASSERT_FALSE(ctb_DList_isEmpty(&list));
 }
 
-void test_ctb_DList_getSize_should_returnCorrectSize(void) {
+void test_ctb_DList_getSize_should_return_correct_size(void) {
+    ctb_DList_t list;
+    ctb_DList_init(&list);
     TEST_ASSERT_EQUAL_INT(0, ctb_DList_getSize(&list));
+
+    ctb_DNode_t node1, node2;
+    ctb_DNode_init(&node1);
+    ctb_DNode_init(&node2);
 
     ctb_DList_addFirst(&list, &node1);
     TEST_ASSERT_EQUAL_INT(1, ctb_DList_getSize(&list));
@@ -47,7 +49,13 @@ void test_ctb_DList_getSize_should_returnCorrectSize(void) {
     TEST_ASSERT_EQUAL_INT(2, ctb_DList_getSize(&list));
 }
 
-void test_ctb_DList_addFirst_should_addNodeToBeginning(void) {
+void test_ctb_DList_addFirst_should_add_node_to_front(void) {
+    ctb_DList_t list;
+    ctb_DList_init(&list);
+    ctb_DNode_t node1, node2;
+    ctb_DNode_init(&node1);
+    ctb_DNode_init(&node2);
+
     ctb_DList_addFirst(&list, &node1);
     TEST_ASSERT_EQUAL_PTR(&node1, ctb_DList_getFirst(&list));
     TEST_ASSERT_EQUAL_PTR(&node1, ctb_DList_getLast(&list));
@@ -59,7 +67,13 @@ void test_ctb_DList_addFirst_should_addNodeToBeginning(void) {
     TEST_ASSERT_EQUAL_PTR(&node2, node1.prev);
 }
 
-void test_ctb_DList_addLast_should_addNodeToEnd(void) {
+void test_ctb_DList_addLast_should_add_node_to_back(void) {
+    ctb_DList_t list;
+    ctb_DList_init(&list);
+    ctb_DNode_t node1, node2;
+    ctb_DNode_init(&node1);
+    ctb_DNode_init(&node2);
+
     ctb_DList_addLast(&list, &node1);
     TEST_ASSERT_EQUAL_PTR(&node1, ctb_DList_getFirst(&list));
     TEST_ASSERT_EQUAL_PTR(&node1, ctb_DList_getLast(&list));
@@ -71,7 +85,14 @@ void test_ctb_DList_addLast_should_addNodeToEnd(void) {
     TEST_ASSERT_EQUAL_PTR(&node1, node2.prev);
 }
 
-void test_ctb_DList_addByIndex_should_addNodeAtCorrectIndex(void) {
+void test_ctb_DList_addByIndex_should_add_at_index(void) {
+    ctb_DList_t list;
+    ctb_DList_init(&list);
+    ctb_DNode_t node1, node2, node3;
+    ctb_DNode_init(&node1);
+    ctb_DNode_init(&node2);
+    ctb_DNode_init(&node3);
+
     // Add to empty list
     ctb_DList_addByIndex(&list, &node1, 0);
     TEST_ASSERT_EQUAL_PTR(&node1, ctb_DList_getFirst(&list));
@@ -96,7 +117,12 @@ void test_ctb_DList_addByIndex_should_addNodeAtCorrectIndex(void) {
     TEST_ASSERT_EQUAL_PTR(&node3, ctb_DList_getByIndex(&list, 2));
 }
 
-void test_ctb_DList_removeFirst_should_removeAndReturnFirstNode(void) {
+void test_ctb_DList_removeFirst_should_remove_from_front(void) {
+    ctb_DList_t list;
+    ctb_DList_init(&list);
+    ctb_DNode_t node1, node2;
+    ctb_DNode_init(&node1);
+    ctb_DNode_init(&node2);
     ctb_DList_addLast(&list, &node1);
     ctb_DList_addLast(&list, &node2);
 
@@ -111,7 +137,12 @@ void test_ctb_DList_removeFirst_should_removeAndReturnFirstNode(void) {
     TEST_ASSERT_TRUE(ctb_DList_isEmpty(&list));
 }
 
-void test_ctb_DList_removeLast_should_removeAndReturnLastNode(void) {
+void test_ctb_DList_removeLast_should_remove_from_back(void) {
+    ctb_DList_t list;
+    ctb_DList_init(&list);
+    ctb_DNode_t node1, node2;
+    ctb_DNode_init(&node1);
+    ctb_DNode_init(&node2);
     ctb_DList_addLast(&list, &node1);
     ctb_DList_addLast(&list, &node2);
 
@@ -126,7 +157,13 @@ void test_ctb_DList_removeLast_should_removeAndReturnLastNode(void) {
     TEST_ASSERT_TRUE(ctb_DList_isEmpty(&list));
 }
 
-void test_ctb_DList_removeByIndex_should_removeNodeAtCorrectIndex(void) {
+void test_ctb_DList_removeByIndex_should_remove_at_index(void) {
+    ctb_DList_t list;
+    ctb_DList_init(&list);
+    ctb_DNode_t node1, node2, node3;
+    ctb_DNode_init(&node1);
+    ctb_DNode_init(&node2);
+    ctb_DNode_init(&node3);
     ctb_DList_addLast(&list, &node1);
     ctb_DList_addLast(&list, &node2);
     ctb_DList_addLast(&list, &node3);
@@ -149,7 +186,13 @@ void test_ctb_DList_removeByIndex_should_removeNodeAtCorrectIndex(void) {
     TEST_ASSERT_TRUE(ctb_DList_isEmpty(&list));
 }
 
-void test_ctb_DList_remove_should_removeSpecificNode(void) {
+void test_ctb_DList_remove_should_remove_specific_node(void) {
+    ctb_DList_t list;
+    ctb_DList_init(&list);
+    ctb_DNode_t node1, node2, node3;
+    ctb_DNode_init(&node1);
+    ctb_DNode_init(&node2);
+    ctb_DNode_init(&node3);
     ctb_DList_addLast(&list, &node1);
     ctb_DList_addLast(&list, &node2);
     ctb_DList_addLast(&list, &node3);
@@ -162,7 +205,13 @@ void test_ctb_DList_remove_should_removeSpecificNode(void) {
     TEST_ASSERT_EQUAL_PTR(&node1, node3.prev);
 }
 
-void test_ctb_DList_getIndexOf_should_returnCorrectIndex(void) {
+void test_ctb_DList_getIndexOf_should_return_correct_index(void) {
+    ctb_DList_t list;
+    ctb_DList_init(&list);
+    ctb_DNode_t node1, node2, node3;
+    ctb_DNode_init(&node1);
+    ctb_DNode_init(&node2);
+    ctb_DNode_init(&node3);
     ctb_DList_addLast(&list, &node1);
     ctb_DList_addLast(&list, &node2);
 
@@ -172,12 +221,21 @@ void test_ctb_DList_getIndexOf_should_returnCorrectIndex(void) {
 }
 
 static size_t callCount = 0;
-static void   countOperation(ctb_DNode_t * const node) {
+
+static void countOperation(
+    ctb_DNode_t * const node
+) {
     (void)node;
     callCount++;
 }
 
-void test_ctb_DList_forEach_should_applyOperationToAllNodes(void) {
+void test_ctb_DList_forEach_should_apply_operation_to_all_nodes(void) {
+    ctb_DList_t list;
+    ctb_DList_init(&list);
+    ctb_DNode_t node1, node2, node3;
+    ctb_DNode_init(&node1);
+    ctb_DNode_init(&node2);
+    ctb_DNode_init(&node3);
     ctb_DList_addLast(&list, &node1);
     ctb_DList_addLast(&list, &node2);
     ctb_DList_addLast(&list, &node3);
@@ -187,25 +245,42 @@ void test_ctb_DList_forEach_should_applyOperationToAllNodes(void) {
     TEST_ASSERT_EQUAL_INT(3, callCount);
 }
 
-static bool isNode2(ctb_DNode_t * const node) {
+static ctb_DNode_t * findTarget = NULL;
+
+static bool findPredicate(
+    ctb_DNode_t * const node
+) {
     (void)node;
-    return node == &node2;
+    return node == findTarget;
 }
 
-void test_ctb_DList_find_should_returnFirstMatchingNode(void) {
+void test_ctb_DList_find_should_return_first_matching_node(void) {
+    ctb_DList_t list;
+    ctb_DList_init(&list);
+    ctb_DNode_t node1, node2, node3;
+    ctb_DNode_init(&node1);
+    ctb_DNode_init(&node2);
+    ctb_DNode_init(&node3);
     ctb_DList_addLast(&list, &node1);
     ctb_DList_addLast(&list, &node2);
     ctb_DList_addLast(&list, &node3);
 
-    TEST_ASSERT_EQUAL_PTR(&node2, ctb_DList_find(&list, isNode2));
+    findTarget = &node2;
+    TEST_ASSERT_EQUAL_PTR(&node2, ctb_DList_find(&list, findPredicate));
 
     ctb_DList_remove(&list, &node2);
-    TEST_ASSERT_NULL(ctb_DList_find(&list, isNode2));
+    TEST_ASSERT_NULL(ctb_DList_find(&list, findPredicate));
 }
 
-void test_ctb_DList_clear_should_removeAllNodes(void) {
+void test_ctb_DList_clear_should_empty_list(void) {
+    ctb_DList_t list;
+    ctb_DList_init(&list);
+    ctb_DNode_t node1, node2;
+    ctb_DNode_init(&node1);
+    ctb_DNode_init(&node2);
     ctb_DList_addLast(&list, &node1);
     ctb_DList_addLast(&list, &node2);
+
     ctb_DList_clear(&list);
     TEST_ASSERT_TRUE(ctb_DList_isEmpty(&list));
     TEST_ASSERT_NULL(ctb_DList_getFirst(&list));
