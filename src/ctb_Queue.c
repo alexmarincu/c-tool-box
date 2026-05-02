@@ -27,7 +27,13 @@ void ctb_Queue_enqueue(
 ctb_DNode_t * ctb_Queue_dequeue(
     ctb_Queue_t * const self
 ) {
-    return ctb_DList_removeFirst(&self->list);
+    ctb_DNode_t * node = NULL;
+
+    if (!ctb_Queue_isEmpty(self)) {
+        node = ctb_DList_removeFirst(&self->list);
+    }
+
+    return node;
 }
 
 // cppcheck-suppress [staticFunction, unusedFunction] - API function
