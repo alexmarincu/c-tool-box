@@ -8,6 +8,7 @@
 ctb_DList_t * ctb_DList_init(
     ctb_DList_t * const self
 ) {
+    ctb_assert(self);
     self->first = NULL;
     self->last  = NULL;
     self->size  = 0;
@@ -20,6 +21,9 @@ void ctb_DList_addByIndex(
     ctb_DNode_t * const node,
     size_t const        index
 ) {
+    ctb_assert(self);
+    ctb_assert(node);
+    ctb_assert(index <= self->size);
     if (self->size == 0) {
         self->first = node;
         self->last  = node;
@@ -56,6 +60,7 @@ void ctb_DList_addLast(
     ctb_DList_t * const self,
     ctb_DNode_t * const node
 ) {
+    ctb_assert(self);
     ctb_DList_addByIndex(self, node, self->size);
 }
 
@@ -64,6 +69,10 @@ ctb_DNode_t * ctb_DList_getByIndex(
     ctb_DList_t * const self,
     size_t              index
 ) {
+    ctb_assert(self);
+    if (!(index < self->size)) {
+        return NULL;
+    }
     ctb_DNode_t * node;
     if (index <= self->size / 2) {
         node = self->first;
@@ -83,6 +92,7 @@ ctb_DNode_t * ctb_DList_getByIndex(
 ctb_DNode_t * ctb_DList_getFirst(
     ctb_DList_t const * const self
 ) {
+    ctb_assert(self);
     return self->first;
 }
 
@@ -90,6 +100,7 @@ ctb_DNode_t * ctb_DList_getFirst(
 ctb_DNode_t * ctb_DList_getLast(
     ctb_DList_t const * const self
 ) {
+    ctb_assert(self);
     return self->last;
 }
 
@@ -98,6 +109,10 @@ ctb_DNode_t * ctb_DList_removeByIndex(
     ctb_DList_t * const self,
     size_t const        index
 ) {
+    ctb_assert(self);
+    if (!(index < self->size)) {
+        return NULL;
+    }
     ctb_DNode_t * node;
     if (self->size == 1) {
         node        = self->first;
@@ -131,6 +146,7 @@ ctb_DNode_t * ctb_DList_removeFirst(
 ctb_DNode_t * ctb_DList_removeLast(
     ctb_DList_t * const self
 ) {
+    ctb_assert(self);
     return ctb_DList_removeByIndex(self, self->size - 1);
 }
 
@@ -139,6 +155,8 @@ ctb_DNode_t * ctb_DList_remove(
     ctb_DList_t * const self,
     ctb_DNode_t * const node
 ) {
+    ctb_assert(self);
+    ctb_assert(node);
     ctb_DNode_t * removedNode = NULL;
     if (self->first == node) {
         removedNode = ctb_DList_removeFirst(self);
@@ -164,6 +182,8 @@ size_t ctb_DList_getIndexOf(
     ctb_DList_t * const       self,
     ctb_DNode_t const * const node
 ) {
+    ctb_assert(self);
+    ctb_assert(node);
     size_t                index     = 0;
     bool                  nodeFound = false;
     ctb_DListIterator_t * iter =
@@ -186,6 +206,7 @@ size_t ctb_DList_getIndexOf(
 bool ctb_DList_isEmpty(
     ctb_DList_t const * const self
 ) {
+    ctb_assert(self);
     return (self->size == 0);
 }
 
@@ -193,6 +214,7 @@ bool ctb_DList_isEmpty(
 size_t ctb_DList_getSize(
     ctb_DList_t const * const self
 ) {
+    ctb_assert(self);
     return self->size;
 }
 
@@ -200,9 +222,8 @@ size_t ctb_DList_getSize(
 void ctb_DList_clear(
     ctb_DList_t * const self
 ) {
-    while (self->size > 0) {
-        ctb_DList_removeLast(self);
-    }
+    ctb_assert(self);
+    while (ctb_DList_removeLast(self)) { ; }
 }
 
 // cppcheck-suppress [staticFunction, unusedFunction] - API function

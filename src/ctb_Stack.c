@@ -1,11 +1,13 @@
 #include "ctb_Stack.h"
 
+#include "ctb.h"
+
 // cppcheck-suppress [staticFunction, unusedFunction] - API function
 ctb_Stack_t * ctb_Stack_init(
     ctb_Stack_t * const self
 ) {
+    ctb_assert(self);
     ctb_SList_init(&self->list);
-
     return self;
 }
 
@@ -14,6 +16,7 @@ void ctb_Stack_push(
     ctb_Stack_t * const self,
     ctb_SNode_t * const node
 ) {
+    ctb_assert(self);
     ctb_SList_addFirst(&self->list, node);
 }
 
@@ -21,19 +24,15 @@ void ctb_Stack_push(
 ctb_SNode_t * ctb_Stack_pop(
     ctb_Stack_t * const self
 ) {
-    ctb_SNode_t * node = NULL;
-
-    if (!ctb_Stack_isEmpty(self)) {
-        node = ctb_SList_removeFirst(&self->list);
-    }
-
-    return node;
+    ctb_assert(self);
+    return ctb_SList_removeFirst(&self->list);
 }
 
 // cppcheck-suppress [staticFunction, unusedFunction] - API function
 ctb_SNode_t * ctb_Stack_peek(
     ctb_Stack_t const * const self
 ) {
+    ctb_assert(self);
     return ctb_SList_getFirst(&self->list);
 }
 
@@ -41,6 +40,7 @@ ctb_SNode_t * ctb_Stack_peek(
 bool ctb_Stack_isEmpty(
     ctb_Stack_t const * const self
 ) {
+    ctb_assert(self);
     return ctb_SList_isEmpty(&self->list);
 }
 
@@ -48,5 +48,6 @@ bool ctb_Stack_isEmpty(
 void ctb_Stack_clear(
     ctb_Stack_t * const self
 ) {
+    ctb_assert(self);
     ctb_SList_clear(&self->list);
 }

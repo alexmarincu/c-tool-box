@@ -8,6 +8,7 @@
 ctb_SList_t * ctb_SList_init(
     ctb_SList_t * const self
 ) {
+    ctb_assert(self);
     self->first = NULL;
     self->size  = 0;
     return self;
@@ -17,6 +18,7 @@ ctb_SList_t * ctb_SList_init(
 bool ctb_SList_isEmpty(
     ctb_SList_t const * const self
 ) {
+    ctb_assert(self);
     return (self->size == 0);
 }
 
@@ -24,6 +26,7 @@ bool ctb_SList_isEmpty(
 size_t ctb_SList_getSize(
     ctb_SList_t const * const self
 ) {
+    ctb_assert(self);
     return self->size;
 }
 
@@ -33,6 +36,9 @@ void ctb_SList_addByIndex(
     ctb_SNode_t * const node,
     size_t const        index
 ) {
+    ctb_assert(self);
+    ctb_assert(node);
+    ctb_assert(index <= self->size);
     if (index == 0) {
         node->next  = self->first;
         self->first = node;
@@ -57,6 +63,7 @@ void ctb_SList_addLast(
     ctb_SList_t * const self,
     ctb_SNode_t * const node
 ) {
+    ctb_assert(self);
     ctb_SList_addByIndex(self, node, self->size);
 }
 
@@ -65,6 +72,10 @@ ctb_SNode_t * ctb_SList_getByIndex(
     ctb_SList_t * const self,
     size_t const        index
 ) {
+    ctb_assert(self);
+    if (!(index < self->size)) {
+        return NULL;
+    }
     ctb_SNode_t * node = self->first;
     for (size_t i = 0; i < index; i++) {
         node = node->next;
@@ -76,6 +87,7 @@ ctb_SNode_t * ctb_SList_getByIndex(
 ctb_SNode_t * ctb_SList_getFirst(
     ctb_SList_t const * const self
 ) {
+    ctb_assert(self);
     return self->first;
 }
 
@@ -83,6 +95,7 @@ ctb_SNode_t * ctb_SList_getFirst(
 ctb_SNode_t * ctb_SList_getLast(
     ctb_SList_t const * const self
 ) {
+    ctb_assert(self);
     ctb_SNode_t * node = self->first;
     if (node != NULL) {
         while (node->next != NULL) {
@@ -97,6 +110,10 @@ ctb_SNode_t * ctb_SList_removeByIndex(
     ctb_SList_t * const self,
     size_t const        index
 ) {
+    ctb_assert(self);
+    if (!(index < self->size)) {
+        return NULL;
+    }
     ctb_SNode_t * node;
     if (index == 0) {
         node        = self->first;
@@ -121,6 +138,7 @@ ctb_SNode_t * ctb_SList_removeFirst(
 ctb_SNode_t * ctb_SList_removeLast(
     ctb_SList_t * const self
 ) {
+    ctb_assert(self);
     return ctb_SList_removeByIndex(self, self->size - 1);
 }
 
@@ -129,6 +147,8 @@ ctb_SNode_t * ctb_SList_remove(
     ctb_SList_t * const       self,
     ctb_SNode_t const * const node
 ) {
+    ctb_assert(self);
+    ctb_assert(node);
     ctb_SNode_t * removedNode = NULL;
     if (self->first == node) {
         removedNode = ctb_SList_removeFirst(self);
@@ -151,6 +171,8 @@ size_t ctb_SList_getIndexOf(
     ctb_SList_t const * const self,
     ctb_SNode_t const * const node
 ) {
+    ctb_assert(self);
+    ctb_assert(node);
     size_t              index     = 0;
     bool                nodeFound = false;
     ctb_SNode_t const * curr      = self->first;
@@ -172,9 +194,8 @@ size_t ctb_SList_getIndexOf(
 void ctb_SList_clear(
     ctb_SList_t * const self
 ) {
-    while (self->size > 0) {
-        ctb_SList_removeFirst(self);
-    }
+    ctb_assert(self);
+    while (ctb_SList_removeFirst(self)) { ; }
 }
 
 // cppcheck-suppress [staticFunction, unusedFunction] - API function
