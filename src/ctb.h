@@ -21,28 +21,28 @@
     itemType,    \
     length       \
 )                \
-    ((itemType[length]){ 0 })
+    ((itemType[length]){ (itemType){ 0 } })
 
 /**
  * @brief Creates an object of the given type and initializes it with zeros
  *
  * @param type Type of the object
- * @return Object of the given type initialized with zeros
+ * @return Pointer to an object of the given type initialized with zeros
  */
 #define ctb_obj( \
     type         \
 )                \
-    ((type){ 0 })
+    (&(type){ 0 })
 
 /**
- * @brief Calculates the length of the given array
+ * @brief Calculates the capacity of the given array
  *
- * @param arr Array to calculate the length from
- * @return Length of the array
+ * @param arr Array to calculate the capacity from
+ * @return Capacity of the array
  */
-#define ctb_lengthOf( \
-    arr               \
-)                     \
+#define ctb_capacityOf( \
+    arr                 \
+)                       \
     (sizeof(arr) / sizeof(arr[0]))
 
 /**

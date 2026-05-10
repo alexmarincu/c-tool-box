@@ -1,6 +1,8 @@
 var group__ctb__Queue =
 [
-    [ "ctb_Queue", "structctb__Queue.html", null ],
+    [ "ctb_Queue", "structctb__Queue.html", [
+      [ "list", "structctb__Queue.html#a8c894011cf6aaec663376d93745ec7f8", null ]
+    ] ],
     [ "ctb_Queue_t", "group__ctb__Queue.html#gac85188d50469f4aaa9bf38b71bba28b8", null ],
     [ "ctb_Queue_clear", "group__ctb__Queue.html#gaf2addc746bf330d2148d992457b9d11b", null ],
     [ "ctb_Queue_dequeue", "group__ctb__Queue.html#gaeef70185c6f7b4f721ed9790a87db5a0", null ],

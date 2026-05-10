@@ -21,7 +21,7 @@ typedef struct ctb_Queue ctb_Queue_t;
  * @brief Queue data structure
  */
 struct ctb_Queue {
-    ctb_DList_t list;
+    ctb_DList_t list; /**< Underlying doubly linked list to store the queue elements. */
 };
 
 /**

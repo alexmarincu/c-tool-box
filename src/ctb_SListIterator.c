@@ -8,8 +8,8 @@ ctb_SListIterator_t * ctb_SListIterator_init(
 ) {
     ctb_assert(self);
     ctb_assert(list);
-    self->list    = list;
-    self->current = ctb_SList_getFirst(list);
+    self->list     = list;
+    self->nextNode = ctb_SList_getFirst(list);
     return self;
 }
 
@@ -18,7 +18,7 @@ ctb_SListIterator_t * ctb_SListIterator_resetToFirst(
     ctb_SListIterator_t * const self
 ) {
     ctb_assert(self);
-    self->current = ctb_SList_getFirst(self->list);
+    self->nextNode = ctb_SList_getFirst(self->list);
     return self;
 }
 
@@ -27,7 +27,7 @@ bool ctb_SListIterator_hasNext(
     ctb_SListIterator_t const * const self
 ) {
     ctb_assert(self);
-    return (self->current != NULL);
+    return (self->nextNode != NULL);
 }
 
 // cppcheck-suppress [staticFunction, unusedFunction] - API function
@@ -37,8 +37,8 @@ ctb_SNode_t * ctb_SListIterator_next(
     ctb_assert(self);
     ctb_SNode_t * node = NULL;
     if (ctb_SListIterator_hasNext(self)) {
-        node          = self->current;
-        self->current = ctb_SNode_getNext(self->current);
+        node           = self->nextNode;
+        self->nextNode = ctb_SNode_getNext(self->nextNode);
     }
     return node;
 }

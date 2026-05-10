@@ -20,7 +20,7 @@ void test_ctb_SListIterator_init_should_initialize_iterator(void) {
     ctb_SListIterator_init(&iterator, &list);
 
     TEST_ASSERT_EQUAL_PTR(&list, iterator.list);
-    TEST_ASSERT_EQUAL_PTR(&node1, iterator.current);
+    TEST_ASSERT_EQUAL_PTR(&node1, iterator.nextNode);
 }
 
 void test_ctb_SListIterator_resetToFirst_should_reset_to_first_node(void) {
@@ -36,10 +36,10 @@ void test_ctb_SListIterator_resetToFirst_should_reset_to_first_node(void) {
 
     ctb_SListIterator_init(&iterator, &list);
     ctb_SListIterator_next(&iterator); // Move to node2
-    TEST_ASSERT_EQUAL_PTR(&node2, iterator.current);
+    TEST_ASSERT_EQUAL_PTR(&node2, iterator.nextNode);
 
     ctb_SListIterator_resetToFirst(&iterator);
-    TEST_ASSERT_EQUAL_PTR(&node1, iterator.current);
+    TEST_ASSERT_EQUAL_PTR(&node1, iterator.nextNode);
 }
 
 void test_ctb_SListIterator_hasNext_and_next_should_iterate_forward(void) {

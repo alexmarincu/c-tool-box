@@ -20,7 +20,7 @@ void test_ctb_DListIterator_init_should_initialize_iterator(void) {
     ctb_DListIterator_init(&iterator, &list);
 
     TEST_ASSERT_EQUAL_PTR(&list, iterator.list);
-    TEST_ASSERT_EQUAL_PTR(&node1, iterator.current);
+    TEST_ASSERT_EQUAL_PTR(&node1, iterator.nextNode);
 }
 
 void test_ctb_DListIterator_resetToFirst_should_reset_to_first_node(void) {
@@ -36,10 +36,10 @@ void test_ctb_DListIterator_resetToFirst_should_reset_to_first_node(void) {
 
     ctb_DListIterator_init(&iterator, &list);
     ctb_DListIterator_next(&iterator); // Move to node2
-    TEST_ASSERT_EQUAL_PTR(&node2, iterator.current);
+    TEST_ASSERT_EQUAL_PTR(&node2, iterator.nextNode);
 
     ctb_DListIterator_resetToFirst(&iterator);
-    TEST_ASSERT_EQUAL_PTR(&node1, iterator.current);
+    TEST_ASSERT_EQUAL_PTR(&node1, iterator.nextNode);
 }
 
 void test_ctb_DListIterator_resetToLast_should_reset_to_last_node(void) {
@@ -54,10 +54,10 @@ void test_ctb_DListIterator_resetToLast_should_reset_to_last_node(void) {
     ctb_DList_addLast(&list, &node2);
 
     ctb_DListIterator_init(&iterator, &list);
-    TEST_ASSERT_EQUAL_PTR(&node1, iterator.current);
+    TEST_ASSERT_EQUAL_PTR(&node1, iterator.nextNode);
 
     ctb_DListIterator_resetToLast(&iterator);
-    TEST_ASSERT_EQUAL_PTR(&node2, iterator.current);
+    TEST_ASSERT_EQUAL_PTR(&node2, iterator.nextNode);
 }
 
 void test_ctb_DListIterator_hasNext_and_next_should_iterate_forward(void) {

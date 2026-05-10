@@ -2,7 +2,7 @@ var group__ctb__SList =
 [
     [ "ctb_SList", "structctb__SList.html", [
       [ "first", "structctb__SList.html#a0790518a43a018bb0c652ef605fe5cf4", null ],
-      [ "size", "structctb__SList.html#a7e3e99bd876aaf8adc28963496f0b42a", null ]
+      [ "length", "structctb__SList.html#add802a30fa6319d7e5b4147a7a035387", null ]
     ] ],
     [ "ctb_SList_t", "group__ctb__SList.html#ga988d9107590aba59eda54c1f8cb20cf2", null ],
     [ "ctb_SList_addByIndex", "group__ctb__SList.html#gaba164c8a79cfd0ea0076df6b3d9a89ff", null ],
@@ -15,7 +15,7 @@ var group__ctb__SList =
     [ "ctb_SList_getFirst", "group__ctb__SList.html#ga077a7d13cb44200c6f1a748646822544", null ],
     [ "ctb_SList_getIndexOf", "group__ctb__SList.html#ga8a4c8d6ad2225335addc885f97935dd6", null ],
     [ "ctb_SList_getLast", "group__ctb__SList.html#ga98cd253cf542023076271454eee0fd94", null ],
-    [ "ctb_SList_getSize", "group__ctb__SList.html#gad6ec00d350512d01bf4a2dcade9c4828", null ],
+    [ "ctb_SList_getLength", "group__ctb__SList.html#ga056a614222ef155795e5a60170d5069b", null ],
     [ "ctb_SList_init", "group__ctb__SList.html#ga5400a4c20dace4be8db26d1f712f997a", null ],
     [ "ctb_SList_isEmpty", "group__ctb__SList.html#ga974aeb6f95d6e40d999307c9064c9163", null ],
     [ "ctb_SList_remove", "group__ctb__SList.html#gafd57da2c8b964825acc28d326831ce6c", null ],

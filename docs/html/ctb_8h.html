@@ -103,7 +103,8 @@ $(function(){initNavTree('ctb_8h.html','',''); });
   <div class="headertitle"><div class="title">ctb.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;stddef.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;assert.h&gt;</code><br />
+<code>#include &lt;stddef.h&gt;</code><br />
 </div>
 <p><a href="ctb_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -113,14 +114,16 @@ Macros</h2></td></tr>
 <tr class="memdesc:ga3cfa95ee417b058939aa836cc3560d2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an array of the given type and length.  <br /></td></tr>
 <tr class="memitem:gad53c7c3e26427f3a33302be748c170c2" id="r_gad53c7c3e26427f3a33302be748c170c2"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__ctb.html#gad53c7c3e26427f3a33302be748c170c2">ctb_obj</a>(type)</td></tr>
 <tr class="memdesc:gad53c7c3e26427f3a33302be748c170c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an object of the given type and initializes it with zeros.  <br /></td></tr>
-<tr class="memitem:ga842c639f2a28f6b929b4b8edc2a533f5" id="r_ga842c639f2a28f6b929b4b8edc2a533f5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__ctb.html#ga842c639f2a28f6b929b4b8edc2a533f5">ctb_lengthOf</a>(arr)</td></tr>
-<tr class="memdesc:ga842c639f2a28f6b929b4b8edc2a533f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the length of the given array.  <br /></td></tr>
+<tr class="memitem:ga205c41f4492c7427e3210fb2665083b1" id="r_ga205c41f4492c7427e3210fb2665083b1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__ctb.html#ga205c41f4492c7427e3210fb2665083b1">ctb_capacityOf</a>(arr)</td></tr>
+<tr class="memdesc:ga205c41f4492c7427e3210fb2665083b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the capacity of the given array.  <br /></td></tr>
 <tr class="memitem:gaf7f3adc44ba81d82f4a663e94ac9d691" id="r_gaf7f3adc44ba81d82f4a663e94ac9d691"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__ctb.html#gaf7f3adc44ba81d82f4a663e94ac9d691">ctb_containerOf</a>(obj,  type,  member)</td></tr>
 <tr class="memdesc:gaf7f3adc44ba81d82f4a663e94ac9d691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the address of the containing object.  <br /></td></tr>
 <tr class="memitem:ga7d64364eec9882fd8f511bb444cd13d5" id="r_ga7d64364eec9882fd8f511bb444cd13d5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__ctb.html#ga7d64364eec9882fd8f511bb444cd13d5">ctb_alignOf</a>(type)</td></tr>
 <tr class="memdesc:ga7d64364eec9882fd8f511bb444cd13d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the alignment requirement of a type.  <br /></td></tr>
 <tr class="memitem:gaefccd90d6c24191d046a24057deea509" id="r_gaefccd90d6c24191d046a24057deea509"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__ctb.html#gaefccd90d6c24191d046a24057deea509">ctb_staticAssert</a>(expression,  identifier)</td></tr>
 <tr class="memdesc:gaefccd90d6c24191d046a24057deea509"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a compile-time assertion.  <br /></td></tr>
+<tr class="memitem:ga9bebaf31f4edd211a72ea3af59de44c2" id="r_ga9bebaf31f4edd211a72ea3af59de44c2"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="group__ctb.html#ga9bebaf31f4edd211a72ea3af59de44c2">ctb_assert</a>(expression)</td></tr>
+<tr class="memdesc:ga9bebaf31f4edd211a72ea3af59de44c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runtime assertion for design by contract validation.  <br /></td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

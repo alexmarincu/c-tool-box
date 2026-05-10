@@ -40,8 +40,8 @@ typedef void (*ctb_DListIterator_ForEachOperation_t)(ctb_DNode_t * const node);
  * @brief Doubly linked list iterator data structure.
  */
 struct ctb_DListIterator {
-    ctb_DList_t * list;    /**< Pointer to the doubly linked list. */
-    ctb_DNode_t * current; /**< Pointer to the current node in the iteration. */
+    ctb_DList_t * list;     /**< Pointer to the doubly linked list. */
+    ctb_DNode_t * nextNode; /**< Pointer to the next node in the iteration. */
 };
 
 /**

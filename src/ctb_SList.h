@@ -23,8 +23,8 @@ typedef struct ctb_SList ctb_SList_t;
  * @brief Singly linked list data structure
  */
 struct ctb_SList {
-    ctb_SNode_t * first; /**< Pointer to the first node */
-    size_t        size;  /**< Number of nodes */
+    ctb_SNode_t * first;  /**< Pointer to the first node */
+    size_t        length; /**< Number of nodes currently in the list. */
 };
 
 /**
@@ -174,9 +174,9 @@ bool ctb_SList_isEmpty(
  * @brief Returns the size of the singly linked list
  *
  * @param self Pointer to a singly linked list
- * @return Size of the singly linked list
+ * @return Length of the singly linked list
  */
-size_t ctb_SList_getSize(
+size_t ctb_SList_getLength(
     ctb_SList_t const * const self
 );
 

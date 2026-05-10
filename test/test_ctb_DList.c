@@ -12,7 +12,7 @@ void test_ctb_DList_init_should_initialize_list(void) {
     ctb_DList_t list;
     ctb_DList_init(&list);
     TEST_ASSERT_TRUE(ctb_DList_isEmpty(&list));
-    TEST_ASSERT_EQUAL_INT(0, ctb_DList_getSize(&list));
+    TEST_ASSERT_EQUAL_INT(0, ctb_DList_getLength(&list));
     TEST_ASSERT_NULL(ctb_DList_getFirst(&list));
     TEST_ASSERT_NULL(ctb_DList_getLast(&list));
 }
@@ -33,20 +33,20 @@ void test_ctb_DList_isEmpty_should_return_false_for_non_empty_list(void) {
     TEST_ASSERT_FALSE(ctb_DList_isEmpty(&list));
 }
 
-void test_ctb_DList_getSize_should_return_correct_size(void) {
+void test_ctb_DList_getLength_should_return_correct_size(void) {
     ctb_DList_t list;
     ctb_DList_init(&list);
-    TEST_ASSERT_EQUAL_INT(0, ctb_DList_getSize(&list));
+    TEST_ASSERT_EQUAL_INT(0, ctb_DList_getLength(&list));
 
     ctb_DNode_t node1, node2;
     ctb_DNode_init(&node1);
     ctb_DNode_init(&node2);
 
     ctb_DList_addFirst(&list, &node1);
-    TEST_ASSERT_EQUAL_INT(1, ctb_DList_getSize(&list));
+    TEST_ASSERT_EQUAL_INT(1, ctb_DList_getLength(&list));
 
     ctb_DList_addLast(&list, &node2);
-    TEST_ASSERT_EQUAL_INT(2, ctb_DList_getSize(&list));
+    TEST_ASSERT_EQUAL_INT(2, ctb_DList_getLength(&list));
 }
 
 void test_ctb_DList_addFirst_should_add_node_to_front(void) {
@@ -129,7 +129,7 @@ void test_ctb_DList_removeFirst_should_remove_from_front(void) {
     ctb_DNode_t * removed = ctb_DList_removeFirst(&list);
     TEST_ASSERT_EQUAL_PTR(&node1, removed);
     TEST_ASSERT_EQUAL_PTR(&node2, ctb_DList_getFirst(&list));
-    TEST_ASSERT_EQUAL_INT(1, ctb_DList_getSize(&list));
+    TEST_ASSERT_EQUAL_INT(1, ctb_DList_getLength(&list));
     TEST_ASSERT_NULL(node2.prev);
 
     removed = ctb_DList_removeFirst(&list);
@@ -149,7 +149,7 @@ void test_ctb_DList_removeLast_should_remove_from_back(void) {
     ctb_DNode_t * removed = ctb_DList_removeLast(&list);
     TEST_ASSERT_EQUAL_PTR(&node2, removed);
     TEST_ASSERT_EQUAL_PTR(&node1, ctb_DList_getLast(&list));
-    TEST_ASSERT_EQUAL_INT(1, ctb_DList_getSize(&list));
+    TEST_ASSERT_EQUAL_INT(1, ctb_DList_getLength(&list));
     TEST_ASSERT_NULL(node1.next);
 
     removed = ctb_DList_removeLast(&list);
@@ -171,7 +171,7 @@ void test_ctb_DList_removeByIndex_should_remove_at_index(void) {
     // Remove middle
     ctb_DNode_t * removed = ctb_DList_removeByIndex(&list, 1);
     TEST_ASSERT_EQUAL_PTR(&node2, removed);
-    TEST_ASSERT_EQUAL_INT(2, ctb_DList_getSize(&list));
+    TEST_ASSERT_EQUAL_INT(2, ctb_DList_getLength(&list));
     TEST_ASSERT_EQUAL_PTR(&node3, node1.next);
     TEST_ASSERT_EQUAL_PTR(&node1, node3.prev);
 
@@ -200,7 +200,7 @@ void test_ctb_DList_remove_should_remove_specific_node(void) {
     // Remove from middle
     ctb_DNode_t * removed = ctb_DList_remove(&list, &node2);
     TEST_ASSERT_EQUAL_PTR(&node2, removed);
-    TEST_ASSERT_EQUAL_INT(2, ctb_DList_getSize(&list));
+    TEST_ASSERT_EQUAL_INT(2, ctb_DList_getLength(&list));
     TEST_ASSERT_EQUAL_PTR(&node3, node1.next);
     TEST_ASSERT_EQUAL_PTR(&node1, node3.prev);
 }

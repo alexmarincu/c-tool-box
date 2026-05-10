@@ -11,7 +11,7 @@ var ctb__DList_8h =
     [ "ctb_DList_getFirst", "group__ctb__DList.html#ga708ac023482bfbb7292fe660ab4a9ced", null ],
     [ "ctb_DList_getIndexOf", "group__ctb__DList.html#gad0a7645319d248ac57eb04ab50bcad7f", null ],
     [ "ctb_DList_getLast", "group__ctb__DList.html#ga7e9ce8d2ffb10f809fa88d06474907fa", null ],
-    [ "ctb_DList_getSize", "group__ctb__DList.html#ga578786693b8cbae04dc4cad6027ca367", null ],
+    [ "ctb_DList_getLength", "group__ctb__DList.html#ga40d97d5821daf748c50b0cefbb657764", null ],
     [ "ctb_DList_init", "group__ctb__DList.html#ga899e5606c70fc6ac33aea2e58926456b", null ],
     [ "ctb_DList_isEmpty", "group__ctb__DList.html#gae5adb36168a70253cb86f898938b50db", null ],
     [ "ctb_DList_remove", "group__ctb__DList.html#ga111693c92265f7bf520f82479fc89bb7", null ],

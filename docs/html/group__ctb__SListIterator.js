@@ -1,8 +1,8 @@
 var group__ctb__SListIterator =
 [
     [ "ctb_SListIterator", "structctb__SListIterator.html", [
-      [ "current", "structctb__SListIterator.html#a954b8130b9b7ffa329abf0ee6f0680e5", null ],
-      [ "list", "structctb__SListIterator.html#a9f2399a01fd3e78b7e200108bda1ff74", null ]
+      [ "list", "structctb__SListIterator.html#a9f2399a01fd3e78b7e200108bda1ff74", null ],
+      [ "nextNode", "structctb__SListIterator.html#ab58211396402d8d7d24df6d1b0b4a2af", null ]
     ] ],
     [ "ctb_SListIterator_FindPredicate_t", "group__ctb__SListIterator.html#ga04b15a610b01086d9c88867292271d09", null ],
     [ "ctb_SListIterator_ForEachOperation_t", "group__ctb__SListIterator.html#ga16f3051db423f69b3b65f635455870d6", null ],

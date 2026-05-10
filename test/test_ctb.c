@@ -18,19 +18,19 @@ void test_ctb_obj_should_create_zero_initialized_object(void) {
     typedef struct {
         uint32_t a;
         uint32_t b;
-    } test_struct_t;
+    } test_Obj_t;
 
-    test_struct_t const obj = ctb_obj(test_struct_t);
-    TEST_ASSERT_EQUAL_UINT32(0, obj.a);
-    TEST_ASSERT_EQUAL_UINT32(0, obj.b);
+    test_Obj_t const * const obj = ctb_obj(test_Obj_t);
+    TEST_ASSERT_EQUAL_UINT32(0, obj->a);
+    TEST_ASSERT_EQUAL_UINT32(0, obj->b);
 }
 
-void test_ctb_lengthOf_should_return_array_length(void) {
+void test_ctb_capacityOf_should_return_array_length(void) {
     uint32_t const arr1[10] = { 0 };
-    TEST_ASSERT_EQUAL_INT(10, ctb_lengthOf(arr1));
+    TEST_ASSERT_EQUAL_INT(10, ctb_capacityOf(arr1));
 
     int8_t const arr2[5] = { 0 };
-    TEST_ASSERT_EQUAL_INT(5, ctb_lengthOf(arr2));
+    TEST_ASSERT_EQUAL_INT(5, ctb_capacityOf(arr2));
 }
 
 void test_ctb_containerOf_should_return_address_of_containing_object(void) {
@@ -38,13 +38,13 @@ void test_ctb_containerOf_should_return_address_of_containing_object(void) {
         uint32_t a;
         uint32_t b;
         uint32_t c;
-    } test_struct_t;
+    } test_Obj_t;
 
-    test_struct_t obj = { .a = 1, .b = 2, .c = 3 };
+    test_Obj_t obj = { .a = 1, .b = 2, .c = 3 };
 
-    TEST_ASSERT_EQUAL_PTR(&obj, ctb_containerOf(&obj.a, test_struct_t, a));
-    TEST_ASSERT_EQUAL_PTR(&obj, ctb_containerOf(&obj.b, test_struct_t, b));
-    TEST_ASSERT_EQUAL_PTR(&obj, ctb_containerOf(&obj.c, test_struct_t, c));
+    TEST_ASSERT_EQUAL_PTR(&obj, ctb_containerOf(&obj.a, test_Obj_t, a));
+    TEST_ASSERT_EQUAL_PTR(&obj, ctb_containerOf(&obj.b, test_Obj_t, b));
+    TEST_ASSERT_EQUAL_PTR(&obj, ctb_containerOf(&obj.c, test_Obj_t, c));
 }
 
 void test_ctb_alignOf_should_return_alignment(void) {

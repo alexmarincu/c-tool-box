@@ -106,6 +106,7 @@ $(function(){initNavTree('group__ctb.html','',''); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-groups" class="groupheader"><a id="groups" name="groups"></a>
 Topics</h2></td></tr>
+<tr class="memitem:ctb_5FArray" id="r_ctb_5FArray"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="group__ctb__Array.html">ctb_Array</a></td></tr>
 <tr class="memitem:ctb_5FDList" id="r_ctb_5FDList"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="group__ctb__DList.html">ctb_DList</a></td></tr>
 <tr class="memitem:ctb_5FDListIterator" id="r_ctb_5FDListIterator"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="group__ctb__DListIterator.html">ctb_DListIterator</a></td></tr>
 <tr class="memitem:ctb_5FDNode" id="r_ctb_5FDNode"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="group__ctb__DNode.html">ctb_DNode</a></td></tr>
@@ -121,14 +122,16 @@ Macros</h2></td></tr>
 <tr class="memdesc:ga3cfa95ee417b058939aa836cc3560d2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an array of the given type and length.  <br /></td></tr>
 <tr class="memitem:gad53c7c3e26427f3a33302be748c170c2" id="r_gad53c7c3e26427f3a33302be748c170c2"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gad53c7c3e26427f3a33302be748c170c2">ctb_obj</a>(type)</td></tr>
 <tr class="memdesc:gad53c7c3e26427f3a33302be748c170c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an object of the given type and initializes it with zeros.  <br /></td></tr>
-<tr class="memitem:ga842c639f2a28f6b929b4b8edc2a533f5" id="r_ga842c639f2a28f6b929b4b8edc2a533f5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga842c639f2a28f6b929b4b8edc2a533f5">ctb_lengthOf</a>(arr)</td></tr>
-<tr class="memdesc:ga842c639f2a28f6b929b4b8edc2a533f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the length of the given array.  <br /></td></tr>
+<tr class="memitem:ga205c41f4492c7427e3210fb2665083b1" id="r_ga205c41f4492c7427e3210fb2665083b1"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga205c41f4492c7427e3210fb2665083b1">ctb_capacityOf</a>(arr)</td></tr>
+<tr class="memdesc:ga205c41f4492c7427e3210fb2665083b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the capacity of the given array.  <br /></td></tr>
 <tr class="memitem:gaf7f3adc44ba81d82f4a663e94ac9d691" id="r_gaf7f3adc44ba81d82f4a663e94ac9d691"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gaf7f3adc44ba81d82f4a663e94ac9d691">ctb_containerOf</a>(obj,  type,  member)</td></tr>
 <tr class="memdesc:gaf7f3adc44ba81d82f4a663e94ac9d691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the address of the containing object.  <br /></td></tr>
 <tr class="memitem:ga7d64364eec9882fd8f511bb444cd13d5" id="r_ga7d64364eec9882fd8f511bb444cd13d5"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga7d64364eec9882fd8f511bb444cd13d5">ctb_alignOf</a>(type)</td></tr>
 <tr class="memdesc:ga7d64364eec9882fd8f511bb444cd13d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the alignment requirement of a type.  <br /></td></tr>
 <tr class="memitem:gaefccd90d6c24191d046a24057deea509" id="r_gaefccd90d6c24191d046a24057deea509"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#gaefccd90d6c24191d046a24057deea509">ctb_staticAssert</a>(expression,  identifier)</td></tr>
 <tr class="memdesc:gaefccd90d6c24191d046a24057deea509"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a compile-time assertion.  <br /></td></tr>
+<tr class="memitem:ga9bebaf31f4edd211a72ea3af59de44c2" id="r_ga9bebaf31f4edd211a72ea3af59de44c2"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ga9bebaf31f4edd211a72ea3af59de44c2">ctb_assert</a>(expression)</td></tr>
+<tr class="memdesc:ga9bebaf31f4edd211a72ea3af59de44c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runtime assertion for design by contract validation.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"></div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
@@ -177,7 +180,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">((itemType[length]){ 0 })</div>
+<b>Value:</b><div class="fragment"><div class="line">((itemType[length]){ (itemType){ 0 } })</div>
 </div><!-- fragment -->
 <p>Creates an array of the given type and length. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -188,6 +191,59 @@ Macros</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Array of the given type and length initialized with zeros </dd></dl>
+
+</div>
+</div>
+<a id="ga9bebaf31f4edd211a72ea3af59de44c2" name="ga9bebaf31f4edd211a72ea3af59de44c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9bebaf31f4edd211a72ea3af59de44c2">&#9670;&#160;</a></span>ctb_assert</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ctb_assert</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>expression</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">assert(expression)</div>
+</div><!-- fragment -->
+<p>Runtime assertion for design by contract validation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">expression</td><td>Expression to assert </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga205c41f4492c7427e3210fb2665083b1" name="ga205c41f4492c7427e3210fb2665083b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga205c41f4492c7427e3210fb2665083b1">&#9670;&#160;</a></span>ctb_capacityOf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ctb_capacityOf</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>arr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">(<span class="keyword">sizeof</span>(arr) / <span class="keyword">sizeof</span>(arr[0]))</div>
+</div><!-- fragment -->
+<p>Calculates the capacity of the given array. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arr</td><td>Array to calculate the capacity from </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Capacity of the array </dd></dl>
 
 </div>
 </div>
@@ -229,33 +285,6 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="ga842c639f2a28f6b929b4b8edc2a533f5" name="ga842c639f2a28f6b929b4b8edc2a533f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga842c639f2a28f6b929b4b8edc2a533f5">&#9670;&#160;</a></span>ctb_lengthOf</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define ctb_lengthOf</td>
-          <td>(</td>
-          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>arr</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">(<span class="keyword">sizeof</span>(arr) / <span class="keyword">sizeof</span>(arr[0]))</div>
-</div><!-- fragment -->
-<p>Calculates the length of the given array. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">arr</td><td>Array to calculate the length from </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Length of the array </dd></dl>
-
-</div>
-</div>
 <a id="gad53c7c3e26427f3a33302be748c170c2" name="gad53c7c3e26427f3a33302be748c170c2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gad53c7c3e26427f3a33302be748c170c2">&#9670;&#160;</a></span>ctb_obj</h2>
 
@@ -270,7 +299,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">((type){ 0 })</div>
+<b>Value:</b><div class="fragment"><div class="line">(&amp;(type){ 0 })</div>
 </div><!-- fragment -->
 <p>Creates an object of the given type and initializes it with zeros. </p>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -279,7 +308,7 @@ Macros</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Object of the given type initialized with zeros </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to an object of the given type initialized with zeros </dd></dl>
 
 </div>
 </div>

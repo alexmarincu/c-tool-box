@@ -23,9 +23,9 @@ typedef struct ctb_DList ctb_DList_t;
  * @brief Doubly linked list data structure.
  */
 struct ctb_DList {
-    ctb_DNode_t * first; /**< Pointer to the first node in the list. */
-    ctb_DNode_t * last;  /**< Pointer to the last node in the list. */
-    size_t        size;  /**< Number of nodes currently in the list. */
+    ctb_DNode_t * first;  /**< Pointer to the first node in the list. */
+    ctb_DNode_t * last;   /**< Pointer to the last node in the list. */
+    size_t        length; /**< Number of nodes currently in the list. */
 };
 
 /**
@@ -176,9 +176,9 @@ bool ctb_DList_isEmpty(
  * @brief Returns the number of nodes in the doubly linked list.
  *
  * @param self Pointer to the doubly linked list.
- * @return The current size of the list.
+ * @return The current length of the list.
  */
-size_t ctb_DList_getSize(
+size_t ctb_DList_getLength(
     ctb_DList_t const * const self
 );
 

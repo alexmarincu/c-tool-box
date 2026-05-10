@@ -40,8 +40,8 @@ typedef void (*ctb_SListIterator_ForEachOperation_t)(ctb_SNode_t * const node);
  * @brief Singly linked list iterator data structure.
  */
 struct ctb_SListIterator {
-    ctb_SList_t * list;    /**< Pointer to the singly linked list. */
-    ctb_SNode_t * current; /**< Pointer to the current node in the iteration. */
+    ctb_SList_t * list;     /**< Pointer to the singly linked list. */
+    ctb_SNode_t * nextNode; /**< Pointer to the next node in the iteration. */
 };
 
 /**
