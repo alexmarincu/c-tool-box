@@ -1,10 +1,10 @@
-#include "ctb_Stack.h"
+#include "ctb_StackList.h"
 
 #include "ctb.h"
 
 // cppcheck-suppress [staticFunction, unusedFunction] - API function
-ctb_Stack_t * ctb_Stack_init(
-    ctb_Stack_t * const self
+ctb_StackList_t * ctb_StackList_init(
+    ctb_StackList_t * const self
 ) {
     ctb_assert(self);
     ctb_SList_init(&self->list);
@@ -12,41 +12,41 @@ ctb_Stack_t * ctb_Stack_init(
 }
 
 // cppcheck-suppress [staticFunction, unusedFunction] - API function
-void ctb_Stack_push(
-    ctb_Stack_t * const self,
-    ctb_SNode_t * const node
+void ctb_StackList_push(
+    ctb_StackList_t * const self,
+    ctb_SNode_t * const     node
 ) {
     ctb_assert(self);
     ctb_SList_addFirst(&self->list, node);
 }
 
 // cppcheck-suppress [staticFunction, unusedFunction] - API function
-ctb_SNode_t * ctb_Stack_pop(
-    ctb_Stack_t * const self
+ctb_SNode_t * ctb_StackList_pop(
+    ctb_StackList_t * const self
 ) {
     ctb_assert(self);
     return ctb_SList_removeFirst(&self->list);
 }
 
 // cppcheck-suppress [staticFunction, unusedFunction] - API function
-ctb_SNode_t * ctb_Stack_peek(
-    ctb_Stack_t const * const self
+ctb_SNode_t * ctb_StackList_peek(
+    ctb_StackList_t const * const self
 ) {
     ctb_assert(self);
     return ctb_SList_getFirst(&self->list);
 }
 
 // cppcheck-suppress [staticFunction, unusedFunction] - API function
-bool ctb_Stack_isEmpty(
-    ctb_Stack_t const * const self
+bool ctb_StackList_isEmpty(
+    ctb_StackList_t const * const self
 ) {
     ctb_assert(self);
     return ctb_SList_isEmpty(&self->list);
 }
 
 // cppcheck-suppress [staticFunction, unusedFunction] - API function
-void ctb_Stack_clear(
-    ctb_Stack_t * const self
+void ctb_StackList_clear(
+    ctb_StackList_t * const self
 ) {
     ctb_assert(self);
     ctb_SList_clear(&self->list);

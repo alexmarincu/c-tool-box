@@ -1,26 +1,26 @@
 /**
  * @file
  */
-#ifndef CTB_QUEUE_H
-#define CTB_QUEUE_H
+#ifndef CTB_QUEUELIST_H
+#define CTB_QUEUELIST_H
 #include <stdbool.h>
 /**
  * @ingroup ctb
- * @defgroup ctb_Queue ctb_Queue
+ * @defgroup ctb_QueueList ctb_QueueList
  * @{
  */
 
 /**
- * @brief Queue type
+ * @brief Queue (list-backed) type
  */
-typedef struct ctb_Queue ctb_Queue_t;
+typedef struct ctb_QueueList ctb_QueueList_t;
 
 #include "ctb_DList.h"
 
 /**
- * @brief Queue data structure
+ * @brief Queue (list-backed) data structure
  */
-struct ctb_Queue {
+struct ctb_QueueList {
     ctb_DList_t list; /**< Underlying doubly linked list to store the queue elements. */
 };
 
@@ -30,8 +30,8 @@ struct ctb_Queue {
  * @param self Pointer to a queue
  * @return Pointer to the initialized queue
  */
-ctb_Queue_t * ctb_Queue_init(
-    ctb_Queue_t * const self
+ctb_QueueList_t * ctb_QueueList_init(
+    ctb_QueueList_t * const self
 );
 
 /**
@@ -40,8 +40,8 @@ ctb_Queue_t * ctb_Queue_init(
  * @param self Pointer to a queue
  * @return True if the queue is empty, false otherwise
  */
-bool ctb_Queue_isEmpty(
-    ctb_Queue_t * const self
+bool ctb_QueueList_isEmpty(
+    ctb_QueueList_t * const self
 );
 
 /**
@@ -50,9 +50,9 @@ bool ctb_Queue_isEmpty(
  * @param self Pointer to a queue
  * @param node Pointer to the node to add
  */
-void ctb_Queue_enqueue(
-    ctb_Queue_t * const self,
-    ctb_DNode_t * const node
+void ctb_QueueList_enqueue(
+    ctb_QueueList_t * const self,
+    ctb_DNode_t * const     node
 );
 
 /**
@@ -61,8 +61,8 @@ void ctb_Queue_enqueue(
  * @param self Pointer to a queue
  * @return Pointer to the first node in the queue
  */
-ctb_DNode_t * ctb_Queue_dequeue(
-    ctb_Queue_t * const self
+ctb_DNode_t * ctb_QueueList_dequeue(
+    ctb_QueueList_t * const self
 );
 
 /**
@@ -70,9 +70,9 @@ ctb_DNode_t * ctb_Queue_dequeue(
  *
  * @param self Pointer to a queue
  */
-void ctb_Queue_clear(
-    ctb_Queue_t * const self
+void ctb_QueueList_clear(
+    ctb_QueueList_t * const self
 );
 
 /** @} */
-#endif // CTB_QUEUE_H
+#endif // CTB_QUEUELIST_H

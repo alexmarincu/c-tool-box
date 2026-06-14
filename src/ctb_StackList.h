@@ -1,25 +1,25 @@
 /**
  * @file
  */
-#ifndef CTB_STACK_H
-#define CTB_STACK_H
+#ifndef CTB_STACKLIST_H
+#define CTB_STACKLIST_H
 /**
  * @ingroup ctb
- * @defgroup ctb_Stack ctb_Stack
+ * @defgroup ctb_StackList ctb_StackList
  * @{
  */
 
 /**
- * @brief Stack type definition.
+ * @brief Stack (list-backed) type definition.
  */
-typedef struct ctb_Stack ctb_Stack_t;
+typedef struct ctb_StackList ctb_StackList_t;
 
 #include "ctb_SList.h"
 
 /**
- * @brief Stack structure.
+ * @brief Stack (list-backed) structure.
  */
-struct ctb_Stack {
+struct ctb_StackList {
     ctb_SList_t list; /**< Underlying single linked list. */
 };
 
@@ -29,8 +29,8 @@ struct ctb_Stack {
  * @param self Pointer to the stack instance.
  * @return Pointer to the initialized stack instance.
  */
-ctb_Stack_t * ctb_Stack_init(
-    ctb_Stack_t * const self
+ctb_StackList_t * ctb_StackList_init(
+    ctb_StackList_t * const self
 );
 
 /**
@@ -39,9 +39,9 @@ ctb_Stack_t * ctb_Stack_init(
  * @param self Pointer to the stack instance.
  * @param node Pointer to the node to push.
  */
-void ctb_Stack_push(
-    ctb_Stack_t * const self,
-    ctb_SNode_t * const node
+void ctb_StackList_push(
+    ctb_StackList_t * const self,
+    ctb_SNode_t * const     node
 );
 
 /**
@@ -50,8 +50,8 @@ void ctb_Stack_push(
  * @param self Pointer to the stack instance.
  * @return Pointer to the popped node, or NULL if the stack is empty.
  */
-ctb_SNode_t * ctb_Stack_pop(
-    ctb_Stack_t * const self
+ctb_SNode_t * ctb_StackList_pop(
+    ctb_StackList_t * const self
 );
 
 /**
@@ -60,8 +60,8 @@ ctb_SNode_t * ctb_Stack_pop(
  * @param self Pointer to the stack instance.
  * @return Pointer to the top node, or NULL if the stack is empty.
  */
-ctb_SNode_t * ctb_Stack_peek(
-    ctb_Stack_t const * const self
+ctb_SNode_t * ctb_StackList_peek(
+    ctb_StackList_t const * const self
 );
 
 /**
@@ -70,8 +70,8 @@ ctb_SNode_t * ctb_Stack_peek(
  * @param self Pointer to the stack instance.
  * @return True if the stack is empty, false otherwise.
  */
-bool ctb_Stack_isEmpty(
-    ctb_Stack_t const * const self
+bool ctb_StackList_isEmpty(
+    ctb_StackList_t const * const self
 );
 
 /**
@@ -79,9 +79,9 @@ bool ctb_Stack_isEmpty(
  *
  * @param self Pointer to the stack instance.
  */
-void ctb_Stack_clear(
-    ctb_Stack_t * const self
+void ctb_StackList_clear(
+    ctb_StackList_t * const self
 );
 
 /** @} */
-#endif // CTB_STACK_H
+#endif // CTB_STACKLIST_H
