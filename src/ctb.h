@@ -3,7 +3,7 @@
  */
 #ifndef CTB_H
 #define CTB_H
-#include <assert.h>
+#include "ctb_config.h"
 #include <stddef.h>
 /**
  * @defgroup ctb ctb
@@ -81,7 +81,7 @@
     expression,           \
     identifier            \
 )                         \
-    typedef char identifier[(!!(expression)) * 2 - 1]
+    ctb_config_staticAssert(expression, identifier)
 
 /**
  * @brief Runtime assertion for design by contract validation
@@ -91,7 +91,7 @@
 #define ctb_assert( \
     expression      \
 )                   \
-    assert(expression)
+    ctb_config_assert(expression)
 
 /** @} */
 #endif // CTB_H
