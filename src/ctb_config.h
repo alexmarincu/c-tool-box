@@ -1,4 +1,7 @@
 /**
+ * @defgroup ctb_config ctb_config
+ * @ingroup ctb
+ * @{
  * @file
  */
 #ifndef CTB_CONFIG_H
@@ -32,4 +35,5 @@
 )                                \
     typedef char id[(!!(expr)) * 2 - 1]
 
+/** @} */
 #endif // CTB_CONFIG_H
