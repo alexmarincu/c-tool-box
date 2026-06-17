@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>C Tool Box: ctb_Queue.h File Reference</title>
+<title>C Tool Box: ctb_StackList.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -74,7 +74,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('ctb__Queue_8h.html','',''); });
+$(function(){initNavTree('ctb__StackList_8h.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -100,37 +100,38 @@ $(function(){initNavTree('ctb__Queue_8h.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">ctb_Queue.h File Reference</div></div>
+  <div class="headertitle"><div class="title">ctb_StackList.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="ctb__DList_8h_source.html">ctb_DList.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="ctb__SList_8h_source.html">ctb_SList.h</a>&quot;</code><br />
 </div>
-<p><a href="ctb__Queue_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="ctb__StackList_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:ctb_5FQueue" id="r_ctb_5FQueue"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structctb__Queue.html">ctb_Queue</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queue data structure.  <a href="structctb__Queue.html#details">More...</a><br /></td></tr>
+<tr class="memitem:ctb_5FStackList" id="r_ctb_5FStackList"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structctb__StackList.html">ctb_StackList</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stack structure.  <a href="structctb__StackList.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:gac85188d50469f4aaa9bf38b71bba28b8" id="r_gac85188d50469f4aaa9bf38b71bba28b8"><td class="memItemLeft">
-typedef struct <a class="el" href="structctb__Queue.html">ctb_Queue</a>&#160;</td><td class="memItemRight"><b>ctb_Queue_t</b></td></tr>
-<tr class="memdesc:gac85188d50469f4aaa9bf38b71bba28b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Queue type. <br /></td></tr>
+<tr class="memitem:ga6d433ec816d26abc16f9abeefb6944c0" id="r_ga6d433ec816d26abc16f9abeefb6944c0"><td class="memItemLeft">
+typedef struct <a class="el" href="structctb__StackList.html">ctb_StackList</a>&#160;</td><td class="memItemRight"><b>ctb_StackList_t</b></td></tr>
+<tr class="memdesc:ga6d433ec816d26abc16f9abeefb6944c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stack type definition. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga05cb4d463560916157001a89d1ca5266" id="r_ga05cb4d463560916157001a89d1ca5266"><td class="memItemLeft"><a class="el" href="group__ctb__Queue.html#gac85188d50469f4aaa9bf38b71bba28b8">ctb_Queue_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="group__ctb__Queue.html#ga05cb4d463560916157001a89d1ca5266">ctb_Queue_init</a> (<a class="el" href="group__ctb__Queue.html#gac85188d50469f4aaa9bf38b71bba28b8">ctb_Queue_t</a> *const self)</td></tr>
-<tr class="memdesc:ga05cb4d463560916157001a89d1ca5266"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a queue.  <br /></td></tr>
-<tr class="memitem:ga102b6938f4e40fd919d1447959b56ac7" id="r_ga102b6938f4e40fd919d1447959b56ac7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="group__ctb__Queue.html#ga102b6938f4e40fd919d1447959b56ac7">ctb_Queue_isEmpty</a> (<a class="el" href="group__ctb__Queue.html#gac85188d50469f4aaa9bf38b71bba28b8">ctb_Queue_t</a> *const self)</td></tr>
-<tr class="memdesc:ga102b6938f4e40fd919d1447959b56ac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the queue is empty.  <br /></td></tr>
-<tr class="memitem:ga04a683da8688fab7a843caa2b6ee0cd7" id="r_ga04a683da8688fab7a843caa2b6ee0cd7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__ctb__Queue.html#ga04a683da8688fab7a843caa2b6ee0cd7">ctb_Queue_enqueue</a> (<a class="el" href="group__ctb__Queue.html#gac85188d50469f4aaa9bf38b71bba28b8">ctb_Queue_t</a> *const self, <a class="el" href="group__ctb__DNode.html#gaa232fcb35df50a9fba1f09d87c03e376">ctb_DNode_t</a> *const node)</td></tr>
-<tr class="memdesc:ga04a683da8688fab7a843caa2b6ee0cd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a node at the end of the queue.  <br /></td></tr>
-<tr class="memitem:gaeef70185c6f7b4f721ed9790a87db5a0" id="r_gaeef70185c6f7b4f721ed9790a87db5a0"><td class="memItemLeft"><a class="el" href="group__ctb__DNode.html#gaa232fcb35df50a9fba1f09d87c03e376">ctb_DNode_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="group__ctb__Queue.html#gaeef70185c6f7b4f721ed9790a87db5a0">ctb_Queue_dequeue</a> (<a class="el" href="group__ctb__Queue.html#gac85188d50469f4aaa9bf38b71bba28b8">ctb_Queue_t</a> *const self)</td></tr>
-<tr class="memdesc:gaeef70185c6f7b4f721ed9790a87db5a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes and returns the first node from the queue.  <br /></td></tr>
-<tr class="memitem:gaf2addc746bf330d2148d992457b9d11b" id="r_gaf2addc746bf330d2148d992457b9d11b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__ctb__Queue.html#gaf2addc746bf330d2148d992457b9d11b">ctb_Queue_clear</a> (<a class="el" href="group__ctb__Queue.html#gac85188d50469f4aaa9bf38b71bba28b8">ctb_Queue_t</a> *const self)</td></tr>
-<tr class="memdesc:gaf2addc746bf330d2148d992457b9d11b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the queue.  <br /></td></tr>
+<tr class="memitem:gabf020b6ff47323443e9d9005eb63cb7e" id="r_gabf020b6ff47323443e9d9005eb63cb7e"><td class="memItemLeft"><a class="el" href="group__ctb__StackList.html#ga6d433ec816d26abc16f9abeefb6944c0">ctb_StackList_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="group__ctb__StackList.html#gabf020b6ff47323443e9d9005eb63cb7e">ctb_StackList_init</a> (<a class="el" href="group__ctb__StackList.html#ga6d433ec816d26abc16f9abeefb6944c0">ctb_StackList_t</a> *const self)</td></tr>
+<tr class="memdesc:gabf020b6ff47323443e9d9005eb63cb7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the stack.  <br /></td></tr>
+<tr class="memitem:ga3ed6acbab144a13403ce03f4844bd9ba" id="r_ga3ed6acbab144a13403ce03f4844bd9ba"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__ctb__StackList.html#ga3ed6acbab144a13403ce03f4844bd9ba">ctb_StackList_push</a> (<a class="el" href="group__ctb__StackList.html#ga6d433ec816d26abc16f9abeefb6944c0">ctb_StackList_t</a> *const self, <a class="el" href="group__ctb__SNode.html#gad41a2cbe5c69b61a4eef454790f4d220">ctb_SNode_t</a> *const node)</td></tr>
+<tr class="memdesc:ga3ed6acbab144a13403ce03f4844bd9ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes a node onto the stack.  <br /></td></tr>
+<tr class="memitem:gaec446d089f3436260c26ef97a865844f" id="r_gaec446d089f3436260c26ef97a865844f"><td class="memItemLeft"><a class="el" href="group__ctb__SNode.html#gad41a2cbe5c69b61a4eef454790f4d220">ctb_SNode_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="group__ctb__StackList.html#gaec446d089f3436260c26ef97a865844f">ctb_StackList_pop</a> (<a class="el" href="group__ctb__StackList.html#ga6d433ec816d26abc16f9abeefb6944c0">ctb_StackList_t</a> *const self)</td></tr>
+<tr class="memdesc:gaec446d089f3436260c26ef97a865844f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pops a node from the stack.  <br /></td></tr>
+<tr class="memitem:gad425d770ab070de85da34890659430cf" id="r_gad425d770ab070de85da34890659430cf"><td class="memItemLeft"><a class="el" href="group__ctb__SNode.html#gad41a2cbe5c69b61a4eef454790f4d220">ctb_SNode_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="group__ctb__StackList.html#gad425d770ab070de85da34890659430cf">ctb_StackList_peek</a> (<a class="el" href="group__ctb__StackList.html#ga6d433ec816d26abc16f9abeefb6944c0">ctb_StackList_t</a> const *const self)</td></tr>
+<tr class="memdesc:gad425d770ab070de85da34890659430cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peeks at the top node of the stack.  <br /></td></tr>
+<tr class="memitem:ga828ef79e31f11ee95e1b3c31630cf9da" id="r_ga828ef79e31f11ee95e1b3c31630cf9da"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="group__ctb__StackList.html#ga828ef79e31f11ee95e1b3c31630cf9da">ctb_StackList_isEmpty</a> (<a class="el" href="group__ctb__StackList.html#ga6d433ec816d26abc16f9abeefb6944c0">ctb_StackList_t</a> const *const self)</td></tr>
+<tr class="memdesc:ga828ef79e31f11ee95e1b3c31630cf9da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the stack is empty.  <br /></td></tr>
+<tr class="memitem:ga2437d783c398ccf80a45819e549774db" id="r_ga2437d783c398ccf80a45819e549774db"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="group__ctb__StackList.html#ga2437d783c398ccf80a45819e549774db">ctb_StackList_clear</a> (<a class="el" href="group__ctb__StackList.html#ga6d433ec816d26abc16f9abeefb6944c0">ctb_StackList_t</a> *const self)</td></tr>
+<tr class="memdesc:ga2437d783c398ccf80a45819e549774db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the stack.  <br /></td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -145,7 +146,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>src</b></li><li class="navelem"><a href="ctb__Queue_8h.html">ctb_Queue.h</a></li>
+    <li class="navelem"><b>src</b></li><li class="navelem"><a href="ctb__StackList_8h.html">ctb_StackList.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
   </ul>
 </div>

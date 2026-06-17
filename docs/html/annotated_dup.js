@@ -5,9 +5,9 @@ var annotated_dup =
     [ "ctb_DList", "structctb__DList.html", "structctb__DList" ],
     [ "ctb_DListIterator", "structctb__DListIterator.html", "structctb__DListIterator" ],
     [ "ctb_DNode", "structctb__DNode.html", "structctb__DNode" ],
-    [ "ctb_Queue", "structctb__Queue.html", "structctb__Queue" ],
+    [ "ctb_QueueList", "structctb__QueueList.html", "structctb__QueueList" ],
     [ "ctb_SList", "structctb__SList.html", "structctb__SList" ],
     [ "ctb_SListIterator", "structctb__SListIterator.html", "structctb__SListIterator" ],
     [ "ctb_SNode", "structctb__SNode.html", "structctb__SNode" ],
-    [ "ctb_Stack", "structctb__Stack.html", "structctb__Stack" ]
+    [ "ctb_StackList", "structctb__StackList.html", "structctb__StackList" ]
 ];
