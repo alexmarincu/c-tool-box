@@ -5,9 +5,9 @@ var searchData=
   ['ctb_5fdlist_2',['ctb_DList',['../structctb__DList.html',1,'']]],
   ['ctb_5fdlistiterator_3',['ctb_DListIterator',['../structctb__DListIterator.html',1,'']]],
   ['ctb_5fdnode_4',['ctb_DNode',['../structctb__DNode.html',1,'']]],
-  ['ctb_5fqueue_5',['ctb_Queue',['../structctb__Queue.html',1,'']]],
+  ['ctb_5fqueuelist_5',['ctb_QueueList',['../structctb__QueueList.html',1,'']]],
   ['ctb_5fslist_6',['ctb_SList',['../structctb__SList.html',1,'']]],
   ['ctb_5fslistiterator_7',['ctb_SListIterator',['../structctb__SListIterator.html',1,'']]],
   ['ctb_5fsnode_8',['ctb_SNode',['../structctb__SNode.html',1,'']]],
-  ['ctb_5fstack_9',['ctb_Stack',['../structctb__Stack.html',1,'']]]
+  ['ctb_5fstacklist_9',['ctb_StackList',['../structctb__StackList.html',1,'']]]
 ];

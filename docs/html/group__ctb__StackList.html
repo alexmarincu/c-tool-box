@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.16.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>C Tool Box: ctb_Stack</title>
+<title>C Tool Box: ctb_StackList</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -74,7 +74,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('group__ctb__Stack.html','',''); });
+$(function(){initNavTree('group__ctb__StackList.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -100,48 +100,48 @@ $(function(){initNavTree('group__ctb__Stack.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">ctb_Stack <div class="ingroups"><a class="el" href="group__ctb.html">ctb</a></div></div></div>
+  <div class="headertitle"><div class="title">ctb_StackList <div class="ingroups"><a class="el" href="group__ctb.html">ctb</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
-<tr class="memitem:ctb_5FStack" id="r_ctb_5FStack"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structctb__Stack.html">ctb_Stack</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stack structure.  <a href="structctb__Stack.html#details">More...</a><br /></td></tr>
+<tr class="memitem:ctb_5FStackList" id="r_ctb_5FStackList"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structctb__StackList.html">ctb_StackList</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stack structure.  <a href="structctb__StackList.html#details">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-typedef-members" class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:ga781767a398578864aae01dceb846a02f" id="r_ga781767a398578864aae01dceb846a02f"><td class="memItemLeft"><a id="ga781767a398578864aae01dceb846a02f" name="ga781767a398578864aae01dceb846a02f"></a>
-typedef struct <a class="el" href="structctb__Stack.html">ctb_Stack</a>&#160;</td><td class="memItemRight"><b>ctb_Stack_t</b></td></tr>
-<tr class="memdesc:ga781767a398578864aae01dceb846a02f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stack type definition. <br /></td></tr>
+<tr class="memitem:ga6d433ec816d26abc16f9abeefb6944c0" id="r_ga6d433ec816d26abc16f9abeefb6944c0"><td class="memItemLeft"><a id="ga6d433ec816d26abc16f9abeefb6944c0" name="ga6d433ec816d26abc16f9abeefb6944c0"></a>
+typedef struct <a class="el" href="structctb__StackList.html">ctb_StackList</a>&#160;</td><td class="memItemRight"><b>ctb_StackList_t</b></td></tr>
+<tr class="memdesc:ga6d433ec816d26abc16f9abeefb6944c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stack type definition. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga6936c17bda492ae5117f1db8effebe3a" id="r_ga6936c17bda492ae5117f1db8effebe3a"><td class="memItemLeft"><a class="el" href="#ga781767a398578864aae01dceb846a02f">ctb_Stack_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga6936c17bda492ae5117f1db8effebe3a">ctb_Stack_init</a> (<a class="el" href="#ga781767a398578864aae01dceb846a02f">ctb_Stack_t</a> *const self)</td></tr>
-<tr class="memdesc:ga6936c17bda492ae5117f1db8effebe3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the stack.  <br /></td></tr>
-<tr class="memitem:ga846a958a77086223ba6e8caf133d9464" id="r_ga846a958a77086223ba6e8caf133d9464"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga846a958a77086223ba6e8caf133d9464">ctb_Stack_push</a> (<a class="el" href="#ga781767a398578864aae01dceb846a02f">ctb_Stack_t</a> *const self, <a class="el" href="group__ctb__SNode.html#gad41a2cbe5c69b61a4eef454790f4d220">ctb_SNode_t</a> *const node)</td></tr>
-<tr class="memdesc:ga846a958a77086223ba6e8caf133d9464"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes a node onto the stack.  <br /></td></tr>
-<tr class="memitem:ga74bc07e7ac0a771fd623399655877060" id="r_ga74bc07e7ac0a771fd623399655877060"><td class="memItemLeft"><a class="el" href="group__ctb__SNode.html#gad41a2cbe5c69b61a4eef454790f4d220">ctb_SNode_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#ga74bc07e7ac0a771fd623399655877060">ctb_Stack_pop</a> (<a class="el" href="#ga781767a398578864aae01dceb846a02f">ctb_Stack_t</a> *const self)</td></tr>
-<tr class="memdesc:ga74bc07e7ac0a771fd623399655877060"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pops a node from the stack.  <br /></td></tr>
-<tr class="memitem:gaf83807df8732efad0fb1eda2de770d32" id="r_gaf83807df8732efad0fb1eda2de770d32"><td class="memItemLeft"><a class="el" href="group__ctb__SNode.html#gad41a2cbe5c69b61a4eef454790f4d220">ctb_SNode_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#gaf83807df8732efad0fb1eda2de770d32">ctb_Stack_peek</a> (<a class="el" href="#ga781767a398578864aae01dceb846a02f">ctb_Stack_t</a> const *const self)</td></tr>
-<tr class="memdesc:gaf83807df8732efad0fb1eda2de770d32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peeks at the top node of the stack.  <br /></td></tr>
-<tr class="memitem:gabf71bc5db6db83aebedc363a8277c903" id="r_gabf71bc5db6db83aebedc363a8277c903"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#gabf71bc5db6db83aebedc363a8277c903">ctb_Stack_isEmpty</a> (<a class="el" href="#ga781767a398578864aae01dceb846a02f">ctb_Stack_t</a> const *const self)</td></tr>
-<tr class="memdesc:gabf71bc5db6db83aebedc363a8277c903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the stack is empty.  <br /></td></tr>
-<tr class="memitem:ga9ed8daeca4b8586f930b0ac61451585c" id="r_ga9ed8daeca4b8586f930b0ac61451585c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga9ed8daeca4b8586f930b0ac61451585c">ctb_Stack_clear</a> (<a class="el" href="#ga781767a398578864aae01dceb846a02f">ctb_Stack_t</a> *const self)</td></tr>
-<tr class="memdesc:ga9ed8daeca4b8586f930b0ac61451585c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the stack.  <br /></td></tr>
+<tr class="memitem:gabf020b6ff47323443e9d9005eb63cb7e" id="r_gabf020b6ff47323443e9d9005eb63cb7e"><td class="memItemLeft"><a class="el" href="#ga6d433ec816d26abc16f9abeefb6944c0">ctb_StackList_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#gabf020b6ff47323443e9d9005eb63cb7e">ctb_StackList_init</a> (<a class="el" href="#ga6d433ec816d26abc16f9abeefb6944c0">ctb_StackList_t</a> *const self)</td></tr>
+<tr class="memdesc:gabf020b6ff47323443e9d9005eb63cb7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the stack.  <br /></td></tr>
+<tr class="memitem:ga3ed6acbab144a13403ce03f4844bd9ba" id="r_ga3ed6acbab144a13403ce03f4844bd9ba"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga3ed6acbab144a13403ce03f4844bd9ba">ctb_StackList_push</a> (<a class="el" href="#ga6d433ec816d26abc16f9abeefb6944c0">ctb_StackList_t</a> *const self, <a class="el" href="group__ctb__SNode.html#gad41a2cbe5c69b61a4eef454790f4d220">ctb_SNode_t</a> *const node)</td></tr>
+<tr class="memdesc:ga3ed6acbab144a13403ce03f4844bd9ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pushes a node onto the stack.  <br /></td></tr>
+<tr class="memitem:gaec446d089f3436260c26ef97a865844f" id="r_gaec446d089f3436260c26ef97a865844f"><td class="memItemLeft"><a class="el" href="group__ctb__SNode.html#gad41a2cbe5c69b61a4eef454790f4d220">ctb_SNode_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#gaec446d089f3436260c26ef97a865844f">ctb_StackList_pop</a> (<a class="el" href="#ga6d433ec816d26abc16f9abeefb6944c0">ctb_StackList_t</a> *const self)</td></tr>
+<tr class="memdesc:gaec446d089f3436260c26ef97a865844f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pops a node from the stack.  <br /></td></tr>
+<tr class="memitem:gad425d770ab070de85da34890659430cf" id="r_gad425d770ab070de85da34890659430cf"><td class="memItemLeft"><a class="el" href="group__ctb__SNode.html#gad41a2cbe5c69b61a4eef454790f4d220">ctb_SNode_t</a> *&#160;</td><td class="memItemRight"><a class="el" href="#gad425d770ab070de85da34890659430cf">ctb_StackList_peek</a> (<a class="el" href="#ga6d433ec816d26abc16f9abeefb6944c0">ctb_StackList_t</a> const *const self)</td></tr>
+<tr class="memdesc:gad425d770ab070de85da34890659430cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Peeks at the top node of the stack.  <br /></td></tr>
+<tr class="memitem:ga828ef79e31f11ee95e1b3c31630cf9da" id="r_ga828ef79e31f11ee95e1b3c31630cf9da"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ga828ef79e31f11ee95e1b3c31630cf9da">ctb_StackList_isEmpty</a> (<a class="el" href="#ga6d433ec816d26abc16f9abeefb6944c0">ctb_StackList_t</a> const *const self)</td></tr>
+<tr class="memdesc:ga828ef79e31f11ee95e1b3c31630cf9da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the stack is empty.  <br /></td></tr>
+<tr class="memitem:ga2437d783c398ccf80a45819e549774db" id="r_ga2437d783c398ccf80a45819e549774db"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga2437d783c398ccf80a45819e549774db">ctb_StackList_clear</a> (<a class="el" href="#ga6d433ec816d26abc16f9abeefb6944c0">ctb_StackList_t</a> *const self)</td></tr>
+<tr class="memdesc:ga2437d783c398ccf80a45819e549774db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clears the stack.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"></div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="ga9ed8daeca4b8586f930b0ac61451585c" name="ga9ed8daeca4b8586f930b0ac61451585c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9ed8daeca4b8586f930b0ac61451585c">&#9670;&#160;</a></span>ctb_Stack_clear()</h2>
+<a id="ga2437d783c398ccf80a45819e549774db" name="ga2437d783c398ccf80a45819e549774db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2437d783c398ccf80a45819e549774db">&#9670;&#160;</a></span>ctb_StackList_clear()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ctb_Stack_clear </td>
+          <td class="memname">void ctb_StackList_clear </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#ga781767a398578864aae01dceb846a02f">ctb_Stack_t</a> *const</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#ga6d433ec816d26abc16f9abeefb6944c0">ctb_StackList_t</a> *const</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -157,16 +157,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga6936c17bda492ae5117f1db8effebe3a" name="ga6936c17bda492ae5117f1db8effebe3a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6936c17bda492ae5117f1db8effebe3a">&#9670;&#160;</a></span>ctb_Stack_init()</h2>
+<a id="gabf020b6ff47323443e9d9005eb63cb7e" name="gabf020b6ff47323443e9d9005eb63cb7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabf020b6ff47323443e9d9005eb63cb7e">&#9670;&#160;</a></span>ctb_StackList_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="#ga781767a398578864aae01dceb846a02f">ctb_Stack_t</a> * ctb_Stack_init </td>
+          <td class="memname"><a class="el" href="#ga6d433ec816d26abc16f9abeefb6944c0">ctb_StackList_t</a> * ctb_StackList_init </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#ga781767a398578864aae01dceb846a02f">ctb_Stack_t</a> *const</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#ga6d433ec816d26abc16f9abeefb6944c0">ctb_StackList_t</a> *const</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -183,16 +183,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gabf71bc5db6db83aebedc363a8277c903" name="gabf71bc5db6db83aebedc363a8277c903"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabf71bc5db6db83aebedc363a8277c903">&#9670;&#160;</a></span>ctb_Stack_isEmpty()</h2>
+<a id="ga828ef79e31f11ee95e1b3c31630cf9da" name="ga828ef79e31f11ee95e1b3c31630cf9da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga828ef79e31f11ee95e1b3c31630cf9da">&#9670;&#160;</a></span>ctb_StackList_isEmpty()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool ctb_Stack_isEmpty </td>
+          <td class="memname">bool ctb_StackList_isEmpty </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#ga781767a398578864aae01dceb846a02f">ctb_Stack_t</a> const *const</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#ga6d433ec816d26abc16f9abeefb6944c0">ctb_StackList_t</a> const *const</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -209,16 +209,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaf83807df8732efad0fb1eda2de770d32" name="gaf83807df8732efad0fb1eda2de770d32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf83807df8732efad0fb1eda2de770d32">&#9670;&#160;</a></span>ctb_Stack_peek()</h2>
+<a id="gad425d770ab070de85da34890659430cf" name="gad425d770ab070de85da34890659430cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad425d770ab070de85da34890659430cf">&#9670;&#160;</a></span>ctb_StackList_peek()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__ctb__SNode.html#gad41a2cbe5c69b61a4eef454790f4d220">ctb_SNode_t</a> * ctb_Stack_peek </td>
+          <td class="memname"><a class="el" href="group__ctb__SNode.html#gad41a2cbe5c69b61a4eef454790f4d220">ctb_SNode_t</a> * ctb_StackList_peek </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#ga781767a398578864aae01dceb846a02f">ctb_Stack_t</a> const *const</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#ga6d433ec816d26abc16f9abeefb6944c0">ctb_StackList_t</a> const *const</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -235,16 +235,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga74bc07e7ac0a771fd623399655877060" name="ga74bc07e7ac0a771fd623399655877060"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga74bc07e7ac0a771fd623399655877060">&#9670;&#160;</a></span>ctb_Stack_pop()</h2>
+<a id="gaec446d089f3436260c26ef97a865844f" name="gaec446d089f3436260c26ef97a865844f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaec446d089f3436260c26ef97a865844f">&#9670;&#160;</a></span>ctb_StackList_pop()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group__ctb__SNode.html#gad41a2cbe5c69b61a4eef454790f4d220">ctb_SNode_t</a> * ctb_Stack_pop </td>
+          <td class="memname"><a class="el" href="group__ctb__SNode.html#gad41a2cbe5c69b61a4eef454790f4d220">ctb_SNode_t</a> * ctb_StackList_pop </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#ga781767a398578864aae01dceb846a02f">ctb_Stack_t</a> *const</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#ga6d433ec816d26abc16f9abeefb6944c0">ctb_StackList_t</a> *const</td>          <td class="paramname"><span class="paramname"><em>self</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -261,16 +261,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga846a958a77086223ba6e8caf133d9464" name="ga846a958a77086223ba6e8caf133d9464"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga846a958a77086223ba6e8caf133d9464">&#9670;&#160;</a></span>ctb_Stack_push()</h2>
+<a id="ga3ed6acbab144a13403ce03f4844bd9ba" name="ga3ed6acbab144a13403ce03f4844bd9ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3ed6acbab144a13403ce03f4844bd9ba">&#9670;&#160;</a></span>ctb_StackList_push()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ctb_Stack_push </td>
+          <td class="memname">void ctb_StackList_push </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="#ga781767a398578864aae01dceb846a02f">ctb_Stack_t</a> *const</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
+          <td class="paramtype"><a class="el" href="#ga6d433ec816d26abc16f9abeefb6944c0">ctb_StackList_t</a> *const</td>          <td class="paramname"><span class="paramname"><em>self</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
