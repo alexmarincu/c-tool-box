@@ -1,6 +1,7 @@
 var group__ctb =
 [
     [ "ctb_Array", "group__ctb__Array.html", "group__ctb__Array" ],
+    [ "ctb_config", "group__ctb__config.html", "group__ctb__config" ],
     [ "ctb_DList", "group__ctb__DList.html", "group__ctb__DList" ],
     [ "ctb_DListIterator", "group__ctb__DListIterator.html", "group__ctb__DListIterator" ],
     [ "ctb_DNode", "group__ctb__DNode.html", "group__ctb__DNode" ],

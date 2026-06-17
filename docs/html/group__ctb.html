@@ -107,6 +107,7 @@ $(function(){initNavTree('group__ctb.html','',''); });
 <tr class="heading"><td colspan="2"><h2 id="header-groups" class="groupheader"><a id="groups" name="groups"></a>
 Topics</h2></td></tr>
 <tr class="memitem:ctb_5FArray" id="r_ctb_5FArray"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="group__ctb__Array.html">ctb_Array</a></td></tr>
+<tr class="memitem:ctb_5Fconfig" id="r_ctb_5Fconfig"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="group__ctb__config.html">ctb_config</a></td></tr>
 <tr class="memitem:ctb_5FDList" id="r_ctb_5FDList"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="group__ctb__DList.html">ctb_DList</a></td></tr>
 <tr class="memitem:ctb_5FDListIterator" id="r_ctb_5FDListIterator"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="group__ctb__DListIterator.html">ctb_DListIterator</a></td></tr>
 <tr class="memitem:ctb_5FDNode" id="r_ctb_5FDNode"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="group__ctb__DNode.html">ctb_DNode</a></td></tr>
@@ -208,9 +209,11 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">assert(expression)</div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="group__ctb__config.html#ga1b9e755ded95a4cbb885da3ade2b79af">ctb_config_assert</a>(expression)</div>
+<div class="ttc" id="agroup__ctb__config_html_ga1b9e755ded95a4cbb885da3ade2b79af"><div class="ttname"><a href="group__ctb__config.html#ga1b9e755ded95a4cbb885da3ade2b79af">ctb_config_assert</a></div><div class="ttdeci">#define ctb_config_assert(expr)</div><div class="ttdoc">User-overridable runtime assertion macro.</div><div class="ttdef"><b>Definition</b> ctb_config.h:18</div></div>
 </div><!-- fragment -->
 <p>Runtime assertion for design by contract validation. </p>
+<p>Delegates to ctb_config_assert, which users may override by providing their own <a class="el" href="ctb__config_8h.html">ctb_config.h</a> earlier in the include path.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">expression</td><td>Expression to assert </td></tr>
@@ -330,9 +333,11 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keywordtype">char</span> identifier[(!!(expression)) * 2 - 1]</div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code hl_define" href="group__ctb__config.html#ga5493980570fdc59c471153ca0b3f25a8">ctb_config_staticAssert</a>(expression, identifier)</div>
+<div class="ttc" id="agroup__ctb__config_html_ga5493980570fdc59c471153ca0b3f25a8"><div class="ttname"><a href="group__ctb__config.html#ga5493980570fdc59c471153ca0b3f25a8">ctb_config_staticAssert</a></div><div class="ttdeci">#define ctb_config_staticAssert(expr, id)</div><div class="ttdoc">User-overridable compile-time assertion macro.</div><div class="ttdef"><b>Definition</b> ctb_config.h:32</div></div>
 </div><!-- fragment -->
 <p>Generates a compile-time assertion. </p>
+<p>Delegates to ctb_config_staticAssert, which users may override by providing their own <a class="el" href="ctb__config_8h.html">ctb_config.h</a> earlier in the include path.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">expression</td><td>Expression to assert </td></tr>
