@@ -1,15 +1,13 @@
 /**
+ * @defgroup ctb_QueueArray ctb_QueueArray
+ * @ingroup ctb
+ * @{
  * @file
  */
 #ifndef CTB_QUEUEARRAY_H
 #define CTB_QUEUEARRAY_H
 #include <stdbool.h>
 #include <stddef.h>
-/**
- * @ingroup ctb
- * @defgroup ctb_QueueArray ctb_QueueArray
- * @{
- */
 
 /**
  * @brief QueueArray type
@@ -130,5 +128,5 @@ void ctb_QueueArray_clear(
     ctb_QueueArray_t * const self
 );
 
-/** @} */
 #endif // CTB_QUEUEARRAY_H
+/** @} */

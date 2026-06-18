@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['items_0',['items',['../structctb__Array.html#a03dd800029e97aba3c5d7c6bd42e6aa5',1,'ctb_Array']]],
-  ['itemsize_1',['itemSize',['../structctb__Array.html#a966b6ddd4ffb8e880b9282effc09b278',1,'ctb_Array']]]
+  ['head_0',['head',['../structctb__DequeArray.html#a7959d401fb86e2f7471364e404668d5a',1,'ctb_DequeArray::head'],['../structctb__QueueArray.html#a4b5de188e3803090a85124e1a7d60f8b',1,'ctb_QueueArray::head']]]
 ];

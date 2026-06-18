@@ -1,3 +1,9 @@
+/**
+ * @defgroup test_ctb_QueueArray test_ctb_QueueArray
+ * @ingroup test
+ * @{
+ * @file
+ */
 #include "unity.h"
 
 #include "ctb_QueueArray.h"
@@ -197,3 +203,5 @@ void test_ctb_QueueArray_should_work_with_struct_elements(void) {
 
     TEST_ASSERT_TRUE(ctb_QueueArray_isEmpty(queue));
 }
+
+/** @} */

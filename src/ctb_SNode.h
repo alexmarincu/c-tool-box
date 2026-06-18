@@ -1,13 +1,11 @@
 /**
+ * @defgroup ctb_SNode ctb_SNode
+ * @ingroup ctb
+ * @{
  * @file
  */
 #ifndef CTB_SNODE_H
 #define CTB_SNODE_H
-/**
- * @ingroup ctb
- * @defgroup ctb_SNode ctb_SNode
- * @{
- */
 
 /**
  * @brief Singly linked node type
@@ -41,5 +39,5 @@ ctb_SNode_t * ctb_SNode_getNext(
     ctb_SNode_t const * const self
 );
 
-/** @} */
 #endif // CTB_SNODE_H
+/** @} */

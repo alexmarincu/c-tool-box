@@ -1,3 +1,9 @@
+/**
+ * @defgroup test_ctb_DequeArray test_ctb_DequeArray
+ * @ingroup test
+ * @{
+ * @file
+ */
 #include "unity.h"
 
 #include "ctb_DequeArray.h"
@@ -349,3 +355,5 @@ void test_ctb_DequeArray_should_work_with_struct_elements(void) {
 
     TEST_ASSERT_TRUE(ctb_DequeArray_isEmpty(deque));
 }
+
+/** @} */

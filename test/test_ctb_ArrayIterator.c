@@ -1,3 +1,9 @@
+/**
+ * @defgroup test_ctb_ArrayIterator test_ctb_ArrayIterator
+ * @ingroup test
+ * @{
+ * @file
+ */
 #include "unity.h"
 
 #include "ctb_Array.h"
@@ -143,3 +149,5 @@ static bool matchesTestItemId(void * const item) {
     test_Item_t const * s = item;
     return s->id == 42;
 }
+
+/** @} */

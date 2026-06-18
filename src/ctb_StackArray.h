@@ -1,15 +1,13 @@
 /**
+ * @defgroup ctb_StackArray ctb_StackArray
+ * @ingroup ctb
+ * @{
  * @file
  */
 #ifndef CTB_STACKARRAY_H
 #define CTB_STACKARRAY_H
 #include <stdbool.h>
 #include <stddef.h>
-/**
- * @ingroup ctb
- * @defgroup ctb_StackArray ctb_StackArray
- * @{
- */
 
 /**
  * @brief StackArray type
@@ -116,5 +114,5 @@ void ctb_StackArray_clear(
     ctb_StackArray_t * const self
 );
 
-/** @} */
 #endif // CTB_STACKARRAY_H
+/** @} */

@@ -1,3 +1,9 @@
+/**
+ * @defgroup test_ctb_Array test_ctb_Array
+ * @ingroup test
+ * @{
+ * @file
+ */
 #include "unity.h"
 
 #include "ctb_Array.h"
@@ -137,3 +143,5 @@ static bool isSeven(void * const item) {
 static bool isTen(void * const item) {
     return *(int *)item == 10;
 }
+
+/** @} */

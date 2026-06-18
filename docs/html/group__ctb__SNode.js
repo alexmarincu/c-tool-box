@@ -1,5 +1,6 @@
 var group__ctb__SNode =
 [
+    [ "ctb_SNode.h", "ctb__SNode_8h.html", null ],
     [ "ctb_SNode", "structctb__SNode.html", [
       [ "next", "structctb__SNode.html#a45cbded55464bb36fe3af6bc3b79cf2a", null ]
     ] ],

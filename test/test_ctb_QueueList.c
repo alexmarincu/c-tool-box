@@ -1,3 +1,9 @@
+/**
+ * @defgroup test_ctb_QueueList test_ctb_QueueList
+ * @ingroup test
+ * @{
+ * @file
+ */
 #include "unity.h"
 
 #include "ctb_QueueList.h"
@@ -62,3 +68,5 @@ void test_ctb_QueueList_clear_should_empty_queue(void) {
     TEST_ASSERT_TRUE(ctb_QueueList_isEmpty(&queue));
     TEST_ASSERT_NULL(ctb_QueueList_dequeue(&queue));
 }
+
+/** @} */

@@ -1,12 +1,12 @@
 var indexSectionsWithContent =
 {
-  0: "acfilnp",
-  1: "c",
-  2: "c",
+  0: "acfhilnpt",
+  1: "ct",
+  2: "ct",
   3: "c",
-  4: "acfilnp",
+  4: "acfhilnpt",
   5: "c",
-  6: "c"
+  6: "ct"
 };
 
 var indexSectionNames =

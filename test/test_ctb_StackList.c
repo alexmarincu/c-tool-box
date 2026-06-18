@@ -1,3 +1,9 @@
+/**
+ * @defgroup test_ctb_StackList test_ctb_StackList
+ * @ingroup test
+ * @{
+ * @file
+ */
 #include "unity.h"
 
 #include "ctb_StackList.h"
@@ -74,3 +80,5 @@ void test_ctb_StackList_clear_should_empty_stack(void) {
     TEST_ASSERT_TRUE(ctb_StackList_isEmpty(&stack));
     TEST_ASSERT_NULL(ctb_StackList_peek(&stack));
 }
+
+/** @} */

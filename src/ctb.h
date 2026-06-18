@@ -1,14 +1,12 @@
 /**
+ * @defgroup ctb ctb
+ * @{
  * @file
  */
 #ifndef CTB_H
 #define CTB_H
-#include <stddef.h>
 #include "ctb_config.h"
-/**
- * @defgroup ctb ctb
- * @{
- */
+#include <stddef.h>
 
 /**
  * @brief Creates an array of the given type and length
@@ -99,5 +97,5 @@
 )                   \
     ctb_config_assert(expression)
 
-/** @} */
 #endif // CTB_H
+/** @} */

@@ -1,3 +1,9 @@
+/**
+ * @defgroup test_ctb test_ctb
+ * @ingroup test
+ * @{
+ * @file
+ */
 #include <stdint.h>
 
 #include "unity.h"
@@ -59,3 +65,5 @@ ctb_staticAssert(1 == 1, test_static_assert_true);
 void test_ctb_staticAssert_should_compile(void) {
     // If it compiles, the static assert passed
 }
+
+/** @} */

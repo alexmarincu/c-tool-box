@@ -1,3 +1,9 @@
+/**
+ * @defgroup test_ctb_DNode test_ctb_DNode
+ * @ingroup test
+ * @{
+ * @file
+ */
 #include <string.h>
 
 #include "unity.h"
@@ -22,3 +28,5 @@ void test_ctb_DNode_init_should_set_next_and_prev_to_null(void) {
     TEST_ASSERT_TRUE(ctb_DNode_getNext(&obj.node) == NULL);
     TEST_ASSERT_TRUE(ctb_DNode_getPrev(&obj.node) == NULL);
 }
+
+/** @} */

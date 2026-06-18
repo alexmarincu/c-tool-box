@@ -1,3 +1,9 @@
+/**
+ * @defgroup test_ctb_SList test_ctb_SList
+ * @ingroup test
+ * @{
+ * @file
+ */
 #include <string.h>
 
 #include "unity.h"
@@ -217,3 +223,5 @@ void test_ctb_SList_find_should_return_matching_node(void) {
     targetNode = NULL; // Won't match anything
     TEST_ASSERT_NULL(ctb_SList_find(&list, findPredicate));
 }
+
+/** @} */

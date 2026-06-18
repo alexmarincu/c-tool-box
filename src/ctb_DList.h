@@ -1,15 +1,13 @@
 /**
+ * @defgroup ctb_DList ctb_DList
+ * @ingroup ctb
+ * @{
  * @file
  */
 #ifndef CTB_DLIST_H
 #define CTB_DLIST_H
 #include <stdbool.h>
 #include <stddef.h>
-/**
- * @ingroup ctb
- * @defgroup ctb_DList ctb_DList
- * @{
- */
 
 /**
  * @brief Doubly linked list type.
@@ -214,5 +212,5 @@ ctb_DNode_t * ctb_DList_find(
     ctb_DListIterator_FindPredicate_t const predicate
 );
 
-/** @} */
 #endif // CTB_DLIST_H
+/** @} */

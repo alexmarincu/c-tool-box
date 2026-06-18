@@ -1,15 +1,13 @@
 /**
+ * @defgroup ctb_Array ctb_Array
+ * @ingroup ctb
+ * @{
  * @file
  */
 #ifndef CTB_ARRAY_H
 #define CTB_ARRAY_H
 #include <stdbool.h>
 #include <stddef.h>
-/**
- * @ingroup ctb
- * @defgroup ctb_Array ctb_Array
- * @{
- */
 
 /**
  * @brief Array type
@@ -121,6 +119,5 @@ void * ctb_Array_find(
     ctb_ArrayIterator_FindPredicate_t const predicate
 );
 
-/** @} */
-
 #endif // CTB_ARRAY_H
+/** @} */

@@ -1,3 +1,9 @@
+/**
+ * @defgroup test_ctb_SListIterator test_ctb_SListIterator
+ * @ingroup test
+ * @{
+ * @file
+ */
 #include "unity.h"
 
 #include "ctb_SListIterator.h"
@@ -124,3 +130,5 @@ void test_ctb_SListIterator_find_should_return_matching_node(void) {
     targetNode = NULL; // Won't match anything
     TEST_ASSERT_NULL(ctb_SListIterator_find(&iterator, findPredicate));
 }
+
+/** @} */

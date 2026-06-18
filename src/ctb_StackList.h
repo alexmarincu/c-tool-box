@@ -1,13 +1,11 @@
 /**
+ * @defgroup ctb_StackList ctb_StackList
+ * @ingroup ctb
+ * @{
  * @file
  */
 #ifndef CTB_STACKLIST_H
 #define CTB_STACKLIST_H
-/**
- * @ingroup ctb
- * @defgroup ctb_StackList ctb_StackList
- * @{
- */
 
 /**
  * @brief Stack type definition.
@@ -41,7 +39,7 @@ ctb_StackList_t * ctb_StackList_init(
  */
 void ctb_StackList_push(
     ctb_StackList_t * const self,
-    ctb_SNode_t * const node
+    ctb_SNode_t * const     node
 );
 
 /**
@@ -83,5 +81,5 @@ void ctb_StackList_clear(
     ctb_StackList_t * const self
 );
 
-/** @} */
 #endif // CTB_STACKLIST_H
+/** @} */

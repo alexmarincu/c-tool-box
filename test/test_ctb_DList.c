@@ -1,3 +1,9 @@
+/**
+ * @defgroup test_ctb_DList test_ctb_DList
+ * @ingroup test
+ * @{
+ * @file
+ */
 #include "unity.h"
 
 #include "ctb_DList.h"
@@ -286,3 +292,5 @@ void test_ctb_DList_clear_should_empty_list(void) {
     TEST_ASSERT_NULL(ctb_DList_getFirst(&list));
     TEST_ASSERT_NULL(ctb_DList_getLast(&list));
 }
+
+/** @} */

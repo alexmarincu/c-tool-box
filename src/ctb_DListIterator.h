@@ -1,14 +1,12 @@
 /**
+ * @defgroup ctb_DListIterator ctb_DListIterator
+ * @ingroup ctb
+ * @{
  * @file
  */
 #ifndef CTB_DLISTITERATOR_H
 #define CTB_DLISTITERATOR_H
 #include <stdbool.h>
-/**
- * @ingroup ctb
- * @defgroup ctb_DListIterator ctb_DListIterator
- * @{
- */
 
 /**
  * @brief Doubly linked list iterator type.
@@ -139,5 +137,5 @@ ctb_DNode_t * ctb_DListIterator_find(
     ctb_DListIterator_FindPredicate_t const predicate
 );
 
-/** @} */
 #endif // CTB_DLISTITERATOR_H
+/** @} */

@@ -1,14 +1,12 @@
 /**
+ * @defgroup ctb_QueueList ctb_QueueList
+ * @ingroup ctb
+ * @{
  * @file
  */
 #ifndef CTB_QUEUELIST_H
 #define CTB_QUEUELIST_H
 #include <stdbool.h>
-/**
- * @ingroup ctb
- * @defgroup ctb_QueueList ctb_QueueList
- * @{
- */
 
 /**
  * @brief Queue type
@@ -52,7 +50,7 @@ bool ctb_QueueList_isEmpty(
  */
 void ctb_QueueList_enqueue(
     ctb_QueueList_t * const self,
-    ctb_DNode_t * const node
+    ctb_DNode_t * const     node
 );
 
 /**
@@ -74,5 +72,5 @@ void ctb_QueueList_clear(
     ctb_QueueList_t * const self
 );
 
-/** @} */
 #endif // CTB_QUEUELIST_H
+/** @} */

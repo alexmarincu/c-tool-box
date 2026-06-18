@@ -1,3 +1,9 @@
+/**
+ * @defgroup test_ctb_SNode test_ctb_SNode
+ * @ingroup test
+ * @{
+ * @file
+ */
 #include <string.h>
 
 #include "unity.h"
@@ -21,3 +27,5 @@ void test_ctb_SNode_init_should_set_next_to_null(void) {
     TEST_ASSERT_TRUE(ctb_containerOf(&obj.node, Obj_t, node) == &obj);
     TEST_ASSERT_TRUE(ctb_SNode_getNext(&obj.node) == NULL);
 }
+
+/** @} */

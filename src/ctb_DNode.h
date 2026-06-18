@@ -1,13 +1,11 @@
 /**
+ * @defgroup ctb_DNode ctb_DNode
+ * @ingroup ctb
+ * @{
  * @file
  */
 #ifndef CTB_DNODE_H
 #define CTB_DNODE_H
-/**
- * @ingroup ctb
- * @defgroup ctb_DNode ctb_DNode
- * @{
- */
 
 /**
  * @brief Doubly linked node type.
@@ -52,5 +50,5 @@ ctb_DNode_t * ctb_DNode_getPrev(
     ctb_DNode_t const * const self
 );
 
-/** @} */
 #endif // CTB_DNODE_H
+/** @} */

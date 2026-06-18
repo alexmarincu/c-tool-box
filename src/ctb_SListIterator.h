@@ -1,14 +1,12 @@
 /**
+ * @defgroup ctb_SListIterator ctb_SListIterator
+ * @ingroup ctb
+ * @{
  * @file
  */
 #ifndef CTB_SLISTITERATOR_H
 #define CTB_SLISTITERATOR_H
 #include <stdbool.h>
-/**
- * @ingroup ctb
- * @defgroup ctb_SListIterator ctb_SListIterator
- * @{
- */
 
 /**
  * @brief Singly linked list iterator type.
@@ -109,5 +107,5 @@ ctb_SNode_t * ctb_SListIterator_find(
     ctb_SListIterator_FindPredicate_t const predicate
 );
 
-/** @} */
 #endif // CTB_SLISTITERATOR_H
+/** @} */

@@ -1,15 +1,13 @@
 /**
+ * @defgroup ctb_DequeArray ctb_DequeArray
+ * @ingroup ctb
+ * @{
  * @file
  */
 #ifndef CTB_DEQUEARRAY_H
 #define CTB_DEQUEARRAY_H
 #include <stdbool.h>
 #include <stddef.h>
-/**
- * @ingroup ctb
- * @defgroup ctb_DequeArray ctb_DequeArray
- * @{
- */
 
 /**
  * @brief DequeArray type
@@ -167,5 +165,5 @@ void ctb_DequeArray_clear(
     ctb_DequeArray_t * const self
 );
 
-/** @} */
 #endif // CTB_DEQUEARRAY_H
+/** @} */

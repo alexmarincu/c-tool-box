@@ -1,7 +1,8 @@
 PROJECT_NAME           = "C Tool Box"
 PROJECT_NUMBER         = 0.1.0
 OPTIMIZE_OUTPUT_FOR_C  = YES
-INPUT                  = ../src
+INPUT                  = ../src \
+                         ../test
 STRIP_CODE_COMMENTS    = NO
 GENERATE_HTML          = YES
 HTML_HEADER            = header.html

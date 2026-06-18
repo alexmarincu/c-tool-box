@@ -1,3 +1,9 @@
+/**
+ * @defgroup test_ctb_StackArray test_ctb_StackArray
+ * @ingroup test
+ * @{
+ * @file
+ */
 #include "unity.h"
 
 #include "ctb_StackArray.h"
@@ -172,3 +178,5 @@ void test_ctb_StackArray_pop_should_return_pointer_to_vacated_slot(void) {
     popped = ctb_StackArray_pop(stack);
     TEST_ASSERT_EQUAL_PTR(&((int *)storage)[0], popped);
 }
+
+/** @} */
