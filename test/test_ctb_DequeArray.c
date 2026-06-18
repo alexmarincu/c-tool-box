@@ -6,7 +6,7 @@ void setUp(void) {}
 void tearDown(void) {}
 
 void test_ctb_DequeArray_init_should_initialize_deque(void) {
-    int storage[4];
+    int                storage[4];
     ctb_DequeArray_t * deque = ctb_DequeArray_init(ctb_DequeArray(storage));
     TEST_ASSERT_NOT_NULL(deque);
     TEST_ASSERT_TRUE(ctb_DequeArray_isEmpty(deque));
@@ -17,10 +17,10 @@ void test_ctb_DequeArray_init_should_initialize_deque(void) {
 }
 
 void test_ctb_DequeArray_pushFirst_should_add_element_at_front(void) {
-    int storage[4];
+    int                storage[4];
     ctb_DequeArray_t * deque = ctb_DequeArray_init(ctb_DequeArray(storage));
 
-    int val = 42;
+    int    val    = 42;
     void * result = ctb_DequeArray_pushFirst(deque, &val);
     TEST_ASSERT_NOT_NULL(result);
     TEST_ASSERT_EQUAL_INT(42, *(int *)result);
@@ -31,10 +31,10 @@ void test_ctb_DequeArray_pushFirst_should_add_element_at_front(void) {
 }
 
 void test_ctb_DequeArray_pushLast_should_add_element_at_back(void) {
-    int storage[4];
+    int                storage[4];
     ctb_DequeArray_t * deque = ctb_DequeArray_init(ctb_DequeArray(storage));
 
-    int val = 42;
+    int    val    = 42;
     void * result = ctb_DequeArray_pushLast(deque, &val);
     TEST_ASSERT_NOT_NULL(result);
     TEST_ASSERT_EQUAL_INT(42, *(int *)result);
@@ -45,7 +45,7 @@ void test_ctb_DequeArray_pushLast_should_add_element_at_back(void) {
 }
 
 void test_ctb_DequeArray_pushFirst_pushLast_maintains_order(void) {
-    int storage[4];
+    int                storage[4];
     ctb_DequeArray_t * deque = ctb_DequeArray_init(ctb_DequeArray(storage));
 
     int v1 = 10, v2 = 20, v3 = 30;
@@ -59,7 +59,7 @@ void test_ctb_DequeArray_pushFirst_pushLast_maintains_order(void) {
 }
 
 void test_ctb_DequeArray_popFirst_should_remove_from_front(void) {
-    int storage[4];
+    int                storage[4];
     ctb_DequeArray_t * deque = ctb_DequeArray_init(ctb_DequeArray(storage));
 
     int v1 = 10, v2 = 20;
@@ -79,7 +79,7 @@ void test_ctb_DequeArray_popFirst_should_remove_from_front(void) {
 }
 
 void test_ctb_DequeArray_popLast_should_remove_from_back(void) {
-    int storage[4];
+    int                storage[4];
     ctb_DequeArray_t * deque = ctb_DequeArray_init(ctb_DequeArray(storage));
 
     int v1 = 10, v2 = 20;
@@ -100,35 +100,35 @@ void test_ctb_DequeArray_popLast_should_remove_from_back(void) {
 }
 
 void test_ctb_DequeArray_popFirst_from_empty_should_return_NULL(void) {
-    int storage[4];
+    int                storage[4];
     ctb_DequeArray_t * deque = ctb_DequeArray_init(ctb_DequeArray(storage));
 
     TEST_ASSERT_NULL(ctb_DequeArray_popFirst(deque));
 }
 
 void test_ctb_DequeArray_popLast_from_empty_should_return_NULL(void) {
-    int storage[4];
+    int                storage[4];
     ctb_DequeArray_t * deque = ctb_DequeArray_init(ctb_DequeArray(storage));
 
     TEST_ASSERT_NULL(ctb_DequeArray_popLast(deque));
 }
 
 void test_ctb_DequeArray_peekFirst_from_empty_should_return_NULL(void) {
-    int storage[4];
+    int                storage[4];
     ctb_DequeArray_t * deque = ctb_DequeArray_init(ctb_DequeArray(storage));
 
     TEST_ASSERT_NULL(ctb_DequeArray_peekFirst(deque));
 }
 
 void test_ctb_DequeArray_peekLast_from_empty_should_return_NULL(void) {
-    int storage[4];
+    int                storage[4];
     ctb_DequeArray_t * deque = ctb_DequeArray_init(ctb_DequeArray(storage));
 
     TEST_ASSERT_NULL(ctb_DequeArray_peekLast(deque));
 }
 
 void test_ctb_DequeArray_pushFirst_full_should_return_NULL(void) {
-    int storage[2];
+    int                storage[2];
     ctb_DequeArray_t * deque = ctb_DequeArray_init(ctb_DequeArray(storage));
 
     int v1 = 1, v2 = 2, v3 = 3;
@@ -139,7 +139,7 @@ void test_ctb_DequeArray_pushFirst_full_should_return_NULL(void) {
 }
 
 void test_ctb_DequeArray_pushLast_full_should_return_NULL(void) {
-    int storage[2];
+    int                storage[2];
     ctb_DequeArray_t * deque = ctb_DequeArray_init(ctb_DequeArray(storage));
 
     int v1 = 1, v2 = 2, v3 = 3;
@@ -150,7 +150,7 @@ void test_ctb_DequeArray_pushLast_full_should_return_NULL(void) {
 }
 
 void test_ctb_DequeArray_clear_should_empty_deque(void) {
-    int storage[4];
+    int                storage[4];
     ctb_DequeArray_t * deque = ctb_DequeArray_init(ctb_DequeArray(storage));
 
     int v1 = 10, v2 = 20;
@@ -167,7 +167,7 @@ void test_ctb_DequeArray_clear_should_empty_deque(void) {
 }
 
 void test_ctb_DequeArray_pushFirst_popFirst_should_work_LIFO(void) {
-    int storage[4];
+    int                storage[4];
     ctb_DequeArray_t * deque = ctb_DequeArray_init(ctb_DequeArray(storage));
 
     int v1 = 10, v2 = 20, v3 = 30;
@@ -182,7 +182,7 @@ void test_ctb_DequeArray_pushFirst_popFirst_should_work_LIFO(void) {
 }
 
 void test_ctb_DequeArray_pushLast_popLast_should_work_LIFO(void) {
-    int storage[4];
+    int                storage[4];
     ctb_DequeArray_t * deque = ctb_DequeArray_init(ctb_DequeArray(storage));
 
     int v1 = 10, v2 = 20, v3 = 30;
@@ -197,7 +197,7 @@ void test_ctb_DequeArray_pushLast_popLast_should_work_LIFO(void) {
 }
 
 void test_ctb_DequeArray_pushFirst_popLast_should_work_FIFO(void) {
-    int storage[4];
+    int                storage[4];
     ctb_DequeArray_t * deque = ctb_DequeArray_init(ctb_DequeArray(storage));
 
     int v1 = 10, v2 = 20, v3 = 30;
@@ -212,7 +212,7 @@ void test_ctb_DequeArray_pushFirst_popLast_should_work_FIFO(void) {
 }
 
 void test_ctb_DequeArray_wrap_around_pushFirst_popLast(void) {
-    int storage[3];
+    int                storage[3];
     ctb_DequeArray_t * deque = ctb_DequeArray_init(ctb_DequeArray(storage));
 
     int v1 = 1, v2 = 2, v3 = 3, v4 = 4;
@@ -235,7 +235,7 @@ void test_ctb_DequeArray_wrap_around_pushFirst_popLast(void) {
 }
 
 void test_ctb_DequeArray_wrap_around_pushLast_and_pushFirst(void) {
-    int storage[3];
+    int                storage[3];
     ctb_DequeArray_t * deque = ctb_DequeArray_init(ctb_DequeArray(storage));
 
     int v1 = 1, v2 = 2, v3 = 3, v4 = 4, v5 = 5;
@@ -262,33 +262,33 @@ void test_ctb_DequeArray_wrap_around_pushLast_and_pushFirst(void) {
 }
 
 void test_ctb_DequeArray_pushFirst_should_return_pointer_to_stored_element(void) {
-    int storage[3];
+    int                storage[3];
     ctb_DequeArray_t * deque = ctb_DequeArray_init(ctb_DequeArray(storage));
 
-    int val = 77;
+    int    val    = 77;
     void * stored = ctb_DequeArray_pushFirst(deque, &val);
     TEST_ASSERT_EQUAL_PTR(&((int *)storage)[2], stored);
 
-    int val2 = 88;
+    int    val2    = 88;
     void * stored2 = ctb_DequeArray_pushFirst(deque, &val2);
     TEST_ASSERT_EQUAL_PTR(&((int *)storage)[1], stored2);
 }
 
 void test_ctb_DequeArray_pushLast_should_return_pointer_to_stored_element(void) {
-    int storage[3];
+    int                storage[3];
     ctb_DequeArray_t * deque = ctb_DequeArray_init(ctb_DequeArray(storage));
 
-    int val = 77;
+    int    val    = 77;
     void * stored = ctb_DequeArray_pushLast(deque, &val);
     TEST_ASSERT_EQUAL_PTR(&((int *)storage)[0], stored);
 
-    int val2 = 88;
+    int    val2    = 88;
     void * stored2 = ctb_DequeArray_pushLast(deque, &val2);
     TEST_ASSERT_EQUAL_PTR(&((int *)storage)[1], stored2);
 }
 
 void test_ctb_DequeArray_popFirst_should_return_pointer_to_vacated_slot(void) {
-    int storage[4];
+    int                storage[4];
     ctb_DequeArray_t * deque = ctb_DequeArray_init(ctb_DequeArray(storage));
 
     int v1 = 10, v2 = 20;
@@ -303,7 +303,7 @@ void test_ctb_DequeArray_popFirst_should_return_pointer_to_vacated_slot(void) {
 }
 
 void test_ctb_DequeArray_popLast_should_return_pointer_to_vacated_slot(void) {
-    int storage[4];
+    int                storage[4];
     ctb_DequeArray_t * deque = ctb_DequeArray_init(ctb_DequeArray(storage));
 
     int v1 = 10, v2 = 20;
@@ -323,7 +323,7 @@ void test_ctb_DequeArray_should_work_with_struct_elements(void) {
         int y;
     } Point;
 
-    Point storage[3];
+    Point              storage[3];
     ctb_DequeArray_t * deque = ctb_DequeArray_init(ctb_DequeArray(storage));
 
     Point p1 = { 1, 2 };

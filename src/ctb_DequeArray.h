@@ -22,10 +22,10 @@ typedef struct ctb_DequeArray ctb_DequeArray_t;
  * @brief DequeArray data structure
  */
 struct ctb_DequeArray {
-    ctb_Array_t array; /**< Underlying array storage */
-    size_t head;       /**< Front index for popFirst/pushFirst operations */
-    size_t tail;       /**< Back index for pushLast/popLast operations */
-    size_t length;     /**< Number of elements currently in the deque */
+    ctb_Array_t array;  /**< Underlying array storage */
+    size_t      head;   /**< Front index for popFirst/pushFirst operations */
+    size_t      tail;   /**< Back index for pushLast/popLast operations */
+    size_t      length; /**< Number of elements currently in the deque */
 };
 
 /**
@@ -34,14 +34,14 @@ struct ctb_DequeArray {
  * @param arr The raw array to initialize the DequeArray with
  * @return Pointer to a compound literal ctb_DequeArray_t initialized with the array's details and zero state
  */
-#define ctb_DequeArray(                    \
-    arr                                    \
-)                                          \
-    (&(ctb_DequeArray_t){                  \
-        .array  = *(ctb_Array(arr)),       \
-        .head   = 0,                       \
-        .tail   = 0,                       \
-        .length = 0,                       \
+#define ctb_DequeArray(              \
+    arr                              \
+)                                    \
+    (&(ctb_DequeArray_t){            \
+        .array  = *(ctb_Array(arr)), \
+        .head   = 0,                 \
+        .tail   = 0,                 \
+        .length = 0,                 \
     })
 
 /**
