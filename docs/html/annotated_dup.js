@@ -9,5 +9,6 @@ var annotated_dup =
     [ "ctb_SList", "structctb__SList.html", "structctb__SList" ],
     [ "ctb_SListIterator", "structctb__SListIterator.html", "structctb__SListIterator" ],
     [ "ctb_SNode", "structctb__SNode.html", "structctb__SNode" ],
+    [ "ctb_StackArray", "structctb__StackArray.html", "structctb__StackArray" ],
     [ "ctb_StackList", "structctb__StackList.html", "structctb__StackList" ]
 ];
