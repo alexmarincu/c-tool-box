@@ -6,7 +6,7 @@ void setUp(void) {}
 void tearDown(void) {}
 
 void test_ctb_QueueArray_init_should_initialize_queue(void) {
-    int storage[4];
+    int                storage[4];
     ctb_QueueArray_t * queue = ctb_QueueArray_init(ctb_QueueArray(storage));
     TEST_ASSERT_NOT_NULL(queue);
     TEST_ASSERT_TRUE(ctb_QueueArray_isEmpty(queue));
@@ -16,10 +16,10 @@ void test_ctb_QueueArray_init_should_initialize_queue(void) {
 }
 
 void test_ctb_QueueArray_enqueue_should_add_element(void) {
-    int storage[4];
+    int                storage[4];
     ctb_QueueArray_t * queue = ctb_QueueArray_init(ctb_QueueArray(storage));
 
-    int val = 42;
+    int    val    = 42;
     void * result = ctb_QueueArray_enqueue(queue, &val);
     TEST_ASSERT_NOT_NULL(result);
     TEST_ASSERT_EQUAL_INT(42, *(int *)result);
@@ -29,7 +29,7 @@ void test_ctb_QueueArray_enqueue_should_add_element(void) {
 }
 
 void test_ctb_QueueArray_dequeue_should_return_front_and_remove(void) {
-    int storage[4];
+    int                storage[4];
     ctb_QueueArray_t * queue = ctb_QueueArray_init(ctb_QueueArray(storage));
 
     int v1 = 10, v2 = 20;
@@ -49,14 +49,14 @@ void test_ctb_QueueArray_dequeue_should_return_front_and_remove(void) {
 }
 
 void test_ctb_QueueArray_dequeue_from_empty_should_return_NULL(void) {
-    int storage[4];
+    int                storage[4];
     ctb_QueueArray_t * queue = ctb_QueueArray_init(ctb_QueueArray(storage));
 
     TEST_ASSERT_NULL(ctb_QueueArray_dequeue(queue));
 }
 
 void test_ctb_QueueArray_peek_should_return_front_without_removing(void) {
-    int storage[4];
+    int                storage[4];
     ctb_QueueArray_t * queue = ctb_QueueArray_init(ctb_QueueArray(storage));
 
     int val = 99;
@@ -67,14 +67,14 @@ void test_ctb_QueueArray_peek_should_return_front_without_removing(void) {
 }
 
 void test_ctb_QueueArray_peek_from_empty_should_return_NULL(void) {
-    int storage[4];
+    int                storage[4];
     ctb_QueueArray_t * queue = ctb_QueueArray_init(ctb_QueueArray(storage));
 
     TEST_ASSERT_NULL(ctb_QueueArray_peek(queue));
 }
 
 void test_ctb_QueueArray_clear_should_empty_queue(void) {
-    int storage[4];
+    int                storage[4];
     ctb_QueueArray_t * queue = ctb_QueueArray_init(ctb_QueueArray(storage));
 
     int v1 = 10, v2 = 20;
@@ -90,7 +90,7 @@ void test_ctb_QueueArray_clear_should_empty_queue(void) {
 }
 
 void test_ctb_QueueArray_enqueue_full_should_return_NULL(void) {
-    int storage[2];
+    int                storage[2];
     ctb_QueueArray_t * queue = ctb_QueueArray_init(ctb_QueueArray(storage));
 
     int v1 = 1, v2 = 2, v3 = 3;
@@ -101,7 +101,7 @@ void test_ctb_QueueArray_enqueue_full_should_return_NULL(void) {
 }
 
 void test_ctb_QueueArray_enqueue_dequeue_cycle_maintains_FIFO_order(void) {
-    int storage[4];
+    int                storage[4];
     ctb_QueueArray_t * queue = ctb_QueueArray_init(ctb_QueueArray(storage));
 
     int v1 = 10, v2 = 20, v3 = 30;
@@ -119,7 +119,7 @@ void test_ctb_QueueArray_enqueue_dequeue_cycle_maintains_FIFO_order(void) {
 }
 
 void test_ctb_QueueArray_enqueue_dequeue_cycle_wraps_around(void) {
-    int storage[3];
+    int                storage[3];
     ctb_QueueArray_t * queue = ctb_QueueArray_init(ctb_QueueArray(storage));
 
     int v1 = 1, v2 = 2, v3 = 3, v4 = 4;
@@ -142,20 +142,20 @@ void test_ctb_QueueArray_enqueue_dequeue_cycle_wraps_around(void) {
 }
 
 void test_ctb_QueueArray_enqueue_should_return_pointer_to_stored_element(void) {
-    int storage[3];
+    int                storage[3];
     ctb_QueueArray_t * queue = ctb_QueueArray_init(ctb_QueueArray(storage));
 
-    int val = 77;
+    int    val    = 77;
     void * stored = ctb_QueueArray_enqueue(queue, &val);
     TEST_ASSERT_EQUAL_PTR(&((int *)storage)[0], stored);
 
-    int val2 = 88;
+    int    val2    = 88;
     void * stored2 = ctb_QueueArray_enqueue(queue, &val2);
     TEST_ASSERT_EQUAL_PTR(&((int *)storage)[1], stored2);
 }
 
 void test_ctb_QueueArray_dequeue_should_return_pointer_to_vacated_slot(void) {
-    int storage[4];
+    int                storage[4];
     ctb_QueueArray_t * queue = ctb_QueueArray_init(ctb_QueueArray(storage));
 
     int v1 = 10, v2 = 20;
@@ -175,7 +175,7 @@ void test_ctb_QueueArray_should_work_with_struct_elements(void) {
         int y;
     } Point;
 
-    Point storage[3];
+    Point              storage[3];
     ctb_QueueArray_t * queue = ctb_QueueArray_init(ctb_QueueArray(storage));
 
     Point p1 = { 1, 2 };
