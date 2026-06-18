@@ -9,6 +9,7 @@ var group__ctb =
     [ "ctb_SList", "group__ctb__SList.html", "group__ctb__SList" ],
     [ "ctb_SListIterator", "group__ctb__SListIterator.html", "group__ctb__SListIterator" ],
     [ "ctb_SNode", "group__ctb__SNode.html", "group__ctb__SNode" ],
+    [ "ctb_StackArray", "group__ctb__StackArray.html", "group__ctb__StackArray" ],
     [ "ctb_StackList", "group__ctb__StackList.html", "group__ctb__StackList" ],
     [ "ctb_alignOf", "group__ctb.html#ga7d64364eec9882fd8f511bb444cd13d5", null ],
     [ "ctb_arr", "group__ctb.html#ga3cfa95ee417b058939aa836cc3560d2a", null ],

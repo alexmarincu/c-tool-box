@@ -11,5 +11,6 @@ var searchData=
   ['ctb_5fslist_8',['ctb_SList',['../group__ctb__SList.html',1,'']]],
   ['ctb_5fslistiterator_9',['ctb_SListIterator',['../group__ctb__SListIterator.html',1,'']]],
   ['ctb_5fsnode_10',['ctb_SNode',['../group__ctb__SNode.html',1,'']]],
-  ['ctb_5fstacklist_11',['ctb_StackList',['../group__ctb__StackList.html',1,'']]]
+  ['ctb_5fstackarray_11',['ctb_StackArray',['../group__ctb__StackArray.html',1,'']]],
+  ['ctb_5fstacklist_12',['ctb_StackList',['../group__ctb__StackList.html',1,'']]]
 ];

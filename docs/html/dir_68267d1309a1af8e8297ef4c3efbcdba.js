@@ -11,5 +11,6 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "ctb_SList.h", "ctb__SList_8h.html", "ctb__SList_8h" ],
     [ "ctb_SListIterator.h", "ctb__SListIterator_8h.html", "ctb__SListIterator_8h" ],
     [ "ctb_SNode.h", "ctb__SNode_8h.html", "ctb__SNode_8h" ],
+    [ "ctb_StackArray.h", "ctb__StackArray_8h.html", "ctb__StackArray_8h" ],
     [ "ctb_StackList.h", "ctb__StackList_8h.html", "ctb__StackList_8h" ]
 ];
