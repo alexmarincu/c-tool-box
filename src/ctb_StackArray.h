@@ -22,8 +22,8 @@ typedef struct ctb_StackArray ctb_StackArray_t;
  * @brief StackArray data structure
  */
 struct ctb_StackArray {
-    ctb_Array_t array; /**< Underlying array storage */
-    size_t length;     /**< Number of elements currently in the stack */
+    ctb_Array_t array;  /**< Underlying array storage */
+    size_t      length; /**< Number of elements currently in the stack */
 };
 
 /**
@@ -32,12 +32,12 @@ struct ctb_StackArray {
  * @param arr The raw array to initialize the StackArray with
  * @return Pointer to a compound literal ctb_StackArray_t initialized with the array's details and zero length
  */
-#define ctb_StackArray(                    \
-    arr                                    \
-)                                          \
-    (&(ctb_StackArray_t){                  \
-        .array  = *(ctb_Array(arr)),       \
-        .length = 0,                       \
+#define ctb_StackArray(              \
+    arr                              \
+)                                    \
+    (&(ctb_StackArray_t){            \
+        .array  = *(ctb_Array(arr)), \
+        .length = 0,                 \
     })
 
 /**
